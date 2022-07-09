@@ -1,0 +1,49 @@
+.about-container {
+  max-width: 1000px !important;
+  //background-color: rgba(240, 248, 255, 0.276);
+
+  header {
+    @include main_Titles();
+  }
+
+  .about-main {
+    color: $sub_grey;
+    @include main_Style;
+    // background-color: rgba(245, 245, 220, 0.155);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin: 50px auto;
+
+    @media only screen and (min-width: $phone) {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+
+    &__details {
+      //background-color: rgba(0, 255, 255, 0.167);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 10px;
+      max-width: 100%;
+
+      @media only screen and (min-width: $phone) {
+        max-width: 60%;
+      }
+    }
+
+    &__picture {
+      height: auto;
+      max-width: 300px;
+
+      @media only screen and (min-width: $phone) {
+        max-width: 30%;
+        height: 100%;
+      }
+    }
+  }
+}

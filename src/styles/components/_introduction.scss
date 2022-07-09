@@ -1,0 +1,53 @@
+.introduction-container {
+  color: $sub_grey;
+  font-family: sans-serif;
+  //background-color: rgba(250, 235, 215, 0.21);
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    letter-spacing: 1px;
+
+    &__one {
+      color: $mainGreen;
+      font-family: "Space Mono", monospace;
+      font-size: 18px;
+    }
+
+    &__two {
+      color: $mainGrey;
+    }
+
+    &__two,
+    &__three {
+      font-size: 36px;
+      font-weight: 700;
+      transition: 0.7s ease;
+      @media only screen and (min-width: $phone) {
+        font-size: 48px;
+      }
+      @media only screen and (min-width: $tablet) {
+        font-size: 56px;
+      }
+    }
+  }
+
+  p {
+    margin-top: 25px;
+    line-height: 28px;
+    max-width: 50ch;
+    font-size: 17px;
+  }
+
+  .introduction-button {
+    @include button_Type1(16px 35px, 16px);
+    background-color: transparent;
+    margin-top: 45px;
+    letter-spacing: 1.5px;
+
+    @media only screen and (min-width: $phone) {
+      //
+    }
+  }
+}

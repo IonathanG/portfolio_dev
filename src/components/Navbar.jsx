@@ -12,14 +12,14 @@ const Navbar = () => {
     setShowMenu((prevState) => !prevState);
   };
 
-  //disable scrolling on the body when menu is open
+  // disable scrolling on the body when menu is open
   useEffect(() => {
     showMenu
       ? (document.body.style.overflow = "hidden")
       : (document.body.style.overflow = "visible");
   }, [showMenu]);
 
-  //close menu if click outside
+  // close menu if click outside
   useEffect(() => {
     const closeMenu = (e) => {
       if (
@@ -45,6 +45,15 @@ const Navbar = () => {
         : setShowNavbar(true);
       prevScroll_Pos = currentScroll_Pos;
     };
+  }, []);
+
+  // Close Menu if window is resized >= phone size
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 780) setShowMenu(false);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   return (
