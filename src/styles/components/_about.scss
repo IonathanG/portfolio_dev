@@ -1,5 +1,5 @@
 .about-container {
-  max-width: 1000px !important;
+  max-width: 1100px !important;
   //background-color: rgba(240, 248, 255, 0.276);
 
   header {
@@ -7,16 +7,18 @@
   }
 
   .about-main {
+    //background-color: rgba(245, 245, 220, 0.155);
     color: $sub_grey;
     @include main_Style;
-    // background-color: rgba(245, 245, 220, 0.155);
+
+    margin: 50px auto;
+    transition: 0.3s ease;
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 40px;
-    margin: 50px auto;
+    gap: 35px;
 
     @media only screen and (min-width: $phone) {
       flex-direction: row;

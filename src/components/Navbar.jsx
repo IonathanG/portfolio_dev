@@ -1,11 +1,13 @@
 import React, { useEffect, useRef, useState } from "react";
 
-const Navbar = () => {
+const Navbar = ({ aboutRef, skillsRef, workRef, contactRef }) => {
   const [showMenu, setShowMenu] = useState(false);
   const [showNavbar, setShowNavbar] = useState(true);
   const btnRef = useRef();
   const containerRef = useRef();
   const menuRef = useRef();
+
+  //const [linkRef, setLinkRef] = useState(null);
 
   // open/close side menu when hamburger is clicked
   const handleMenu = () => {
@@ -38,7 +40,7 @@ const Navbar = () => {
     let prevScroll_Pos = window.pageYOffset;
 
     window.onscroll = () => {
-      console.log(window.pageYOffset);
+      //console.log(window.pageYOffset);
       let currentScroll_Pos = window.pageYOffset;
       prevScroll_Pos < currentScroll_Pos && currentScroll_Pos > 60
         ? setShowNavbar(false)
@@ -55,6 +57,32 @@ const Navbar = () => {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  // Close down menu on Click + Scroll down to the dedicated section
+  const handleClick = (menuIndex) => {
+    setShowMenu(false);
+    const header_OffSet = 80;
+    let offset_Position = 0;
+
+    switch (menuIndex) {
+      case 0:
+        offset_Position = aboutRef.current.offsetTop - header_OffSet;
+        break;
+      case 1:
+        offset_Position = skillsRef.current.offsetTop - header_OffSet;
+        break;
+      case 2:
+        offset_Position = workRef.current.offsetTop - header_OffSet;
+        break;
+      case 3:
+        offset_Position = contactRef.current.offsetTop - header_OffSet;
+        break;
+      default:
+        return null;
+    }
+
+    window.scrollTo({ top: offset_Position, behavior: "smooth" });
+  };
 
   return (
     <>
@@ -73,19 +101,19 @@ const Navbar = () => {
             ref={containerRef}
           >
             <ul className="list-items" ref={menuRef}>
-              <li className="menu-item" onClick={() => setShowMenu(false)}>
+              <li className="menu-item" onClick={() => handleClick(0)}>
                 <span className="menu-item__numeral">01. </span>{" "}
                 <span>About</span>
               </li>
-              <li className="menu-item" onClick={() => setShowMenu(false)}>
+              <li className="menu-item" onClick={() => handleClick(1)}>
                 <span className="menu-item__numeral">02. </span>{" "}
                 <span>Skills</span>
               </li>
-              <li className="menu-item" onClick={() => setShowMenu(false)}>
+              <li className="menu-item" onClick={() => handleClick(2)}>
                 <span className="menu-item__numeral">03. </span>{" "}
                 <span>Work</span>
               </li>
-              <li className="menu-item" onClick={() => setShowMenu(false)}>
+              <li className="menu-item" onClick={() => handleClick(3)}>
                 <span className="menu-item__numeral">04. </span>{" "}
                 <span>Contact</span>
               </li>

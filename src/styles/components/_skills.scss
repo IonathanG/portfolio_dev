@@ -2,4 +2,21 @@
   header {
     @include main_Titles();
   }
+
+  .skills-main {
+    color: $sub_grey;
+    @include main_Style;
+
+    margin: 50px auto;
+    transition: 0.3s ease;
+
+    .skills-list {
+      margin-top: 50px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 45px 50px;
+      justify-content: space-around;
+      align-items: center;
+    }
+  }
 }
