@@ -8,6 +8,7 @@ $mainGreen: #64ffda;
 $mainGrey: rgb(205, 214, 245);
 $mainBackGround: #0b1a2e;
 $sub_grey: rgb(137, 146, 175);
+$lighter_Blue: rgb(17, 35, 64);
 
 //----- RESET -----
 html {
@@ -54,10 +55,10 @@ body {
       margin: 100px auto;
       padding: 20px 15px;
       max-width: 1100px;
-      // min-height: 100vh;
+      min-height: 100vh;
 
       @media only screen and (min-width: $phone) {
-        margin: 120px auto;
+        margin: 100px auto;
         padding: 30px 0;
       }
 

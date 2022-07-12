@@ -3,11 +3,16 @@ import React, { useEffect, useRef, useState } from "react";
 const Navbar = ({ aboutRef, skillsRef, workRef, contactRef }) => {
   const [showMenu, setShowMenu] = useState(false);
   const [showNavbar, setShowNavbar] = useState(true);
+
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const [showAbout, setShowAbout] = useState(false);
+  const [showSkills, setShowSkills] = useState(false);
+  const [showWork, setShowWork] = useState(false);
+  const [showContact, setShowContact] = useState(false);
+
   const btnRef = useRef();
   const containerRef = useRef();
   const menuRef = useRef();
-
-  //const [linkRef, setLinkRef] = useState(null);
 
   // open/close side menu when hamburger is clicked
   const handleMenu = () => {
@@ -84,6 +89,45 @@ const Navbar = ({ aboutRef, skillsRef, workRef, contactRef }) => {
     window.scrollTo({ top: offset_Position, behavior: "smooth" });
   };
 
+  // handle menu change on scroll
+  // select color of current item in display
+  const handleScroll = () => {
+    const position = window.pageYOffset;
+    setScrollPosition(position + 140);
+
+    setShowAbout(false);
+    setShowSkills(false);
+    setShowWork(false);
+    setShowContact(false);
+
+    if (
+      scrollPosition >= aboutRef.current.offsetTop &&
+      scrollPosition < skillsRef.current.offsetTop
+    ) {
+      setShowAbout(true);
+    } else if (
+      scrollPosition >= skillsRef.current.offsetTop &&
+      scrollPosition < workRef.current.offsetTop
+    ) {
+      setShowSkills(true);
+    } else if (
+      scrollPosition >= workRef.current.offsetTop &&
+      scrollPosition < contactRef.current.offsetTop
+    ) {
+      setShowWork(true);
+    } else if (scrollPosition >= contactRef.current.offsetTop) {
+      setShowContact(true);
+    }
+  };
+
+  // monitor current scroll
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  });
+
   return (
     <>
       <div className={`Navbar ${showNavbar ? "" : "hide-Navbar"}`}>
@@ -103,19 +147,21 @@ const Navbar = ({ aboutRef, skillsRef, workRef, contactRef }) => {
             <ul className="list-items" ref={menuRef}>
               <li className="menu-item" onClick={() => handleClick(0)}>
                 <span className="menu-item__numeral">01. </span>{" "}
-                <span>About</span>
+                <span className={showAbout ? "showMenuItem" : ""}>About</span>
               </li>
               <li className="menu-item" onClick={() => handleClick(1)}>
                 <span className="menu-item__numeral">02. </span>{" "}
-                <span>Skills</span>
+                <span className={showSkills ? "showMenuItem" : ""}>Skills</span>
               </li>
               <li className="menu-item" onClick={() => handleClick(2)}>
                 <span className="menu-item__numeral">03. </span>{" "}
-                <span>Work</span>
+                <span className={showWork ? "showMenuItem" : ""}>Work</span>
               </li>
               <li className="menu-item" onClick={() => handleClick(3)}>
                 <span className="menu-item__numeral">04. </span>{" "}
-                <span>Contact</span>
+                <span className={showContact ? "showMenuItem" : ""}>
+                  Contact
+                </span>
               </li>
               <li
                 className="menu-item resume"
