@@ -22,7 +22,7 @@ function App() {
         contactRef={contactRef}
       />
       <div className="Main">
-        <Introduction />
+        <Introduction workRef={workRef} />
         <About ref={aboutRef} />
         <Skills ref={skillsRef} />
         <Work ref={workRef} />

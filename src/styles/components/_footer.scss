@@ -1,3 +1,96 @@
 .footer-container {
   color: white;
+  width: 100%;
+  height: 110px;
+  //background-color: rgba(0, 255, 255, 0.257);
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 25px;
+
+  font-family: "Space Mono", monospace;
+  font-size: 14px;
+
+  @media only screen and (min-width: $phone) {
+    font-size: 15px;
+  }
+
+  .floating-email {
+    display: none;
+    //background-color: rgba(250, 235, 215, 0.357);
+
+    @media only screen and (min-width: $phone) {
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      left: 30px;
+      bottom: 0px;
+    }
+
+    &__detail {
+      transform: rotate(-90deg) translateX(0%) translateY(-2px);
+      width: 20px;
+      font-size: 14px;
+      letter-spacing: 1px;
+
+      cursor: pointer;
+
+      a {
+        color: $sub_grey;
+        transition: 0.3s ease;
+
+        &:hover {
+          color: $mainGreen;
+        }
+      }
+    }
+
+    .line-through {
+      display: none;
+      height: 120px;
+      width: 1px;
+      background-color: $sub_grey;
+
+      @media only screen and (min-width: $phone) {
+        display: block;
+      }
+    }
+  }
+
+  .social-links {
+    display: flex;
+    justify-content: space-around;
+    gap: 25px;
+
+    span {
+      cursor: pointer;
+    }
+  }
+
+  .designed-by {
+    cursor: pointer;
+
+    a {
+      color: $sub_grey;
+      transition: 0.3s ease;
+
+      &:hover {
+        color: $mainGreen;
+      }
+    }
+
+    span {
+      color: $mainGreen;
+    }
+  }
 }

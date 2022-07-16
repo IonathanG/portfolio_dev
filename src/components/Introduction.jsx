@@ -1,6 +1,13 @@
 import React from "react";
 
-const Introduction = () => {
+const Introduction = ({ workRef }) => {
+  const handleClick = () => {
+    const header_OffSet = 80;
+    const offset_Position = workRef.current.offsetTop - header_OffSet;
+
+    window.scrollTo({ top: offset_Position, behavior: "smooth" });
+  };
+
   return (
     <div className="introduction-container">
       <h1 className="header">
@@ -14,7 +21,9 @@ const Introduction = () => {
         esse nesciunt necessitatibus nulla unde amet deserunt voluptas
         voluptatem.
       </p>
-      <button className="introduction-button">Checkout my work!</button>
+      <button className="introduction-button" onClick={handleClick}>
+        Checkout my work!
+      </button>
     </div>
   );
 };

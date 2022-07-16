@@ -40,6 +40,7 @@ body {
     min-height: 100vh;
     padding: 155px 25px 25px 25px;
     //background-color: #64ffdb4b;
+    position: relative;
 
     @media only screen and (min-width: $phone) {
       padding: 155px 120px;
@@ -55,7 +56,7 @@ body {
       margin: 100px auto;
       padding: 20px 15px;
       max-width: 1100px;
-      min-height: 100vh;
+      //min-height: 100vh;
 
       @media only screen and (min-width: $phone) {
         margin: 100px auto;
@@ -88,6 +89,10 @@ ul {
 ol,
 ul {
   list-style: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 img {
