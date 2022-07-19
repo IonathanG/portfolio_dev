@@ -4,34 +4,35 @@
   }
 
   .work-main {
-    color: $sub_grey;
     @include main_Style;
 
+    color: $sub_grey;
     margin: 80px auto;
-    transition: 0.3s ease;
 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    gap: 35px;
+    gap: 140px;
+
+    transition: 0.3s ease;
+    //background-color: rgba(250, 235, 215, 0.261);
+
+    // @media only screen and (min-width: $phone) {
+    //   min-width: 690px !important;
+    // }
 
     &__item {
+      position: relative;
+      transition: 0.3s ease-out;
+
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       align-items: center;
-      gap: 40px;
-      padding: 30px 20px;
-      box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 8px;
-      background-color: $lighter_Blue;
-      border-radius: 5px;
-      transition: 0.4s ease-out;
+      gap: 20px;
 
-      &:hover {
-        //transform: scale(1.01);
-        //border: 0.5px solid $mainGreen;
-      }
+      // background-color: rgba(255, 228, 196, 0.23);
 
       @media only screen and (min-width: $phone) {
         flex-direction: row;
@@ -39,29 +40,56 @@
       }
 
       &--image {
-        height: auto;
-        max-width: 380px;
-        opacity: 0.8;
+        //background-color: rgba(245, 245, 220, 0.263);
+        position: relative;
+        flex: 1;
+        min-width: 300px;
+
+        display: grid;
+        place-items: center;
+
         box-shadow: rgba(23, 8, 49, 0.2) 0px 3px 8px;
         border-radius: 3px;
+        opacity: 0.6;
+        cursor: pointer;
 
-        @media only screen and (min-width: $phone_Small) {
-          max-width: 450px;
+        &:hover {
+          opacity: 0.85;
         }
 
-        @media only screen and (min-width: $phone) {
-          max-width: 50%;
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(100, 255, 219, 0.4);
+          transition: 0.3s ease-in;
+          z-index: 10;
+        }
+
+        &:hover::after {
+          opacity: 0;
+        }
+
+        img {
+          width: 100%;
           height: 100%;
         }
       }
 
       &--details {
+        flex: 1;
         display: flex;
         flex-direction: column;
-        gap: 15px;
-        max-width: 450px;
+        align-items: flex-end;
+        gap: 20px;
+
+        text-align: right;
 
         @media only screen and (min-width: $phone) {
+          margin-left: -100px;
           max-width: 100%;
         }
 
@@ -69,6 +97,7 @@
           display: flex;
           flex-direction: column;
           gap: 5px;
+
           color: $mainGrey;
           font-size: 20px;
           font-weight: 700;
@@ -84,31 +113,88 @@
         }
 
         .item-desc {
-          // background-color: $lighter_Blue;
-          // box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 8px;
+          background-color: $lighter_Blue;
+          box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 8px;
           border-radius: 4px;
-          //padding: 15px 25px;
-          line-height: 22px;
+
+          line-height: 24px;
           font-size: 14px;
           letter-spacing: 0.5px;
           color: $mainGrey;
+
+          padding: 15px 20px;
+          z-index: 5;
         }
 
         .item-tech {
-          //tech
+          z-index: 5;
+          width: 85%;
+          //background-color: rgba(0, 255, 255, 0.252);
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-end;
+          gap: 5px 15px;
+          flex-wrap: wrap;
+
+          .tech-detail {
+            font-size: 15px;
+            font-family: "Space Mono", monospace;
+          }
+        }
+
+        .tech-left {
+          justify-content: flex-start;
         }
 
         .item-links {
-          //links
+          z-index: 5;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          gap: 20px;
+          //background-color: rgba(240, 248, 255, 0.26);
+
+          a {
+            cursor: pointer;
+            display: grid;
+            place-items: center;
+
+            color: $sub_grey;
+            font-family: sans-serif;
+            transition: 0.3s ease;
+
+            &:hover {
+              color: $mainGreen;
+            }
+
+            svg {
+              width: 30px;
+
+              &:hover path {
+                transition: 0.3s ease;
+                fill: $mainGreen;
+              }
+            }
+          }
+        }
+      }
+
+      .detail-left {
+        @media only screen and (min-width: $phone) {
+          align-items: flex-start;
+          text-align: left;
+
+          margin-left: 0;
+          margin-right: -100px;
         }
       }
     }
 
-    .work-divider {
-      height: 1px;
-      width: 50%;
-      background-color: $sub_grey;
-      opacity: 0.7;
+    .item-left {
+      @media only screen and (min-width: $phone) {
+        flex-direction: row-reverse;
+      }
     }
   }
 }

@@ -4,9 +4,9 @@ $phone: 780px;
 $phone_Small: 480px;
 
 //----- COLORS ------
-$mainGreen: #64ffda;
+$mainGreen: rgb(100, 255, 218);
 $mainGrey: rgb(205, 214, 245);
-$mainBackGround: #0b1a2e;
+$mainBackGround: rgb(11, 26, 46);
 $sub_grey: rgb(137, 146, 175);
 $lighter_Blue: rgb(17, 35, 64);
 
@@ -43,7 +43,7 @@ body {
     position: relative;
 
     @media only screen and (min-width: $phone) {
-      padding: 155px 120px;
+      padding: 155px 80px;
     }
 
     @media only screen and (min-width: $tablet) {
@@ -55,7 +55,7 @@ body {
       //background-color: #64ffdb32;
       margin: 100px auto;
       padding: 20px 15px;
-      max-width: 1100px;
+      max-width: 11000px;
       //min-height: 100vh;
 
       @media only screen and (min-width: $phone) {
