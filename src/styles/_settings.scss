@@ -4,11 +4,15 @@ $phone: 780px;
 $phone_Small: 480px;
 
 //----- COLORS ------
-$mainGreen: rgb(100, 255, 218);
-$mainGrey: rgb(205, 214, 245);
+$mainGreen: rgb(102, 255, 219);
+
 $mainBackGround: rgb(11, 26, 46);
-$sub_grey: rgb(137, 146, 175);
 $lighter_Blue: rgb(17, 35, 64);
+$mid_Blue: rgba(13, 31, 53, 0.96);
+
+$mainGrey: rgb(205, 214, 245);
+$mid_grey: rgb(170, 178, 207);
+$sub_grey: rgb(137, 146, 175);
 
 //----- RESET -----
 html {

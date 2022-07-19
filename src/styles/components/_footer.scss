@@ -74,6 +74,15 @@
 
     span {
       cursor: pointer;
+
+      svg {
+        width: 25px;
+
+        &:hover path {
+          transition: 0.3s ease;
+          fill: $mainGreen;
+        }
+      }
     }
   }
 
