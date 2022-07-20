@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import emailjs from "emailjs-com";
 
 const Contact = (props, ref) => {
   const [isMessageSubmitted, setIsMessageSubmitted] = useState(false);
@@ -6,8 +7,25 @@ const Contact = (props, ref) => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
-  const handleSubmit = (e) => {
+  const sendEmail = (e) => {
     e.preventDefault();
+
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+        e.target,
+        `${process.env.REACT_APP_EMAILJS_USER_ID}`
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+
     setIsMessageSubmitted(true);
     setName("");
     setEmail("");
@@ -37,11 +55,9 @@ const Contact = (props, ref) => {
         </div>
 
         {!isMessageSubmitted ? (
-          <form
-            className="contact-main__right"
-            onSubmit={(e) => handleSubmit(e)}
-          >
+          <form className="contact-main__right" onSubmit={sendEmail}>
             <input
+              name="name"
               type="text"
               placeholder="name"
               value={name}
@@ -49,6 +65,7 @@ const Contact = (props, ref) => {
               required
             />
             <input
+              name="email"
               type="email"
               placeholder="email"
               value={email}
