@@ -101,6 +101,7 @@ const Work = (props, ref) => {
                   </svg>
                 </a>
                 <a
+                  className="view-live"
                   href={project.links[1]}
                   target="_blank"
                   rel="noreferrer"

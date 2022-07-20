@@ -8,6 +8,7 @@ import Skills from "./components/Skills";
 import Work from "./components/Work";
 
 function App() {
+  // refs used for scrolling to the matching component
   const aboutRef = useRef(null);
   const skillsRef = useRef(null);
   const workRef = useRef(null);
