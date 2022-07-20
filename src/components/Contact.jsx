@@ -1,7 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import emailjs from "emailjs-com";
+import ThemeContext from "../context/ThemeContext";
 
 const Contact = (props, ref) => {
+  const { darkTheme } = useContext(ThemeContext);
+
   const [isMessageSubmitted, setIsMessageSubmitted] = useState(false);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -34,7 +37,12 @@ const Contact = (props, ref) => {
   };
 
   return (
-    <section ref={ref} className="contact-container">
+    <section
+      ref={ref}
+      className={`contact-container ${
+        darkTheme ? "" : "contact-container_light"
+      }`}
+    >
       <header>
         <span className="numeral">04.</span>
         <span className="menu-name">Let's Connect! </span>

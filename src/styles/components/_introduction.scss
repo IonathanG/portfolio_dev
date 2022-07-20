@@ -45,9 +45,24 @@
     background-color: transparent;
     margin-top: 45px;
     letter-spacing: 1.5px;
+  }
+}
 
-    @media only screen and (min-width: $phone) {
-      //
+// light theme
+.introduction-container_light {
+  color: $sub_grey_light;
+
+  .header {
+    &__one {
+      color: $mainGreen_light;
     }
+
+    &__two {
+      color: $mainGrey_light;
+    }
+  }
+
+  .introduction-button {
+    @include button_light();
   }
 }

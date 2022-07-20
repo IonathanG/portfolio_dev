@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
+import ThemeContext from "../context/ThemeContext";
 
 const About = (props, ref) => {
+  const { darkTheme } = useContext(ThemeContext);
+
   return (
-    <section ref={ref} className="about-container">
+    <section
+      ref={ref}
+      className={`about-container ${darkTheme ? "" : "about-container_light"}`}
+    >
       <header>
         <span className="numeral">01.</span>
         <span className="menu-name">About Me </span>

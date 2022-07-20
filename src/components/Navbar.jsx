@@ -1,6 +1,9 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, useContext } from "react";
+import ThemeContext from "../context/ThemeContext";
 
 const Navbar = ({ aboutRef, skillsRef, workRef, contactRef }) => {
+  const { darkTheme, switchTheme } = useContext(ThemeContext);
+
   const [showMenu, setShowMenu] = useState(false);
   const [showNavbar, setShowNavbar] = useState(true);
 
@@ -130,9 +133,14 @@ const Navbar = ({ aboutRef, skillsRef, workRef, contactRef }) => {
 
   return (
     <>
-      <div className={`Navbar ${showNavbar ? "" : "hide-Navbar"}`}>
+      <div
+        className={`Navbar ${showNavbar ? "" : "hide-Navbar"} ${
+          darkTheme ? "" : "Navbar_light"
+        } `}
+      >
         <div className="Navbar__logo">
           <img className="logo" src="logo/logo.svg" alt="logo" />
+          <button onClick={switchTheme}>SWITCH THEME</button>
         </div>
         <div className="Navbar__menu">
           <div className="menu-hamburger" onClick={handleMenu} ref={btnRef}>

@@ -111,3 +111,47 @@
     }
   }
 }
+
+// light theme
+.contact-container_light {
+  header {
+    @include main_Titles_light();
+  }
+
+  .contact-main {
+    color: $sub_grey_light;
+
+    &__left {
+      .social-links {
+        span {
+          svg {
+            &:hover path {
+              fill: $mainGreen_light;
+            }
+          }
+        }
+      }
+    }
+
+    &__right {
+      input,
+      textarea {
+        &:focus {
+          outline: 2px solid $mainGreen_light;
+        }
+      }
+
+      button {
+        @include button_light();
+      }
+    }
+
+    .messageSent {
+      color: $mainGreen_light;
+
+      span {
+        color: $mainGrey_light;
+      }
+    }
+  }
+}

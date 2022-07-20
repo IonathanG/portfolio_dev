@@ -57,3 +57,20 @@
     }
   }
 }
+
+// light theme
+.skills-container_light {
+  header {
+    @include main_Titles_light();
+  }
+
+  .skills-main {
+    color: $sub_grey_light;
+
+    .skills-list {
+      li {
+        color: $mid_grey_light;
+      }
+    }
+  }
+}

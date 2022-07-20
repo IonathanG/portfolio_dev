@@ -49,3 +49,13 @@
     }
   }
 }
+
+// light theme
+.about-container_light {
+  header {
+    @include main_Titles_light();
+  }
+  .about-main {
+    color: $sub_grey_light;
+  }
+}

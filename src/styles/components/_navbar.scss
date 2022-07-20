@@ -1,7 +1,7 @@
 .Navbar {
   color: $mainGrey;
   box-shadow: rgba(2, 1, 6, 0.256) 0px 20px 30px -10px;
-  background-color: #0b1a2ec4;
+  background-color: $navBar_background;
   backdrop-filter: blur(10px);
 
   width: 100%;
@@ -47,7 +47,7 @@
         display: block;
         height: 2px;
         width: 35px;
-        background: #6fffe9;
+        background: $brightGreen;
         margin: 8px auto;
         margin-right: 0;
         transition: all 0.7s ease;
@@ -70,13 +70,13 @@
 
       .top {
         transform: translateY(10px) rotateZ(405deg);
-        background-color: #f92c8c;
+        background-color: $pinkish_Hamburger;
         width: 35px !important;
       }
 
       .bottom {
         transform: translateY(-10px) rotateZ(-405deg);
-        background-color: #f92c8c;
+        background-color: $pinkish_Hamburger;
         width: 35px !important;
       }
 
@@ -87,7 +87,7 @@
 
     .menu-container {
       //transition: 0.4s ease-in-out;
-      background-color: rgb(17, 35, 64);
+      background-color: $lighter_Blue;
       height: 100vh;
       min-width: 70vw;
       position: absolute;
@@ -182,4 +182,51 @@
   left: 0;
   top: 0;
   z-index: 10;
+}
+
+// light theme
+.Navbar_light {
+  color: $mainGrey_light;
+  box-shadow: rgba(2, 1, 6, 0.256) 0px 20px 30px -10px;
+  background-color: $navBar_background_light;
+
+  .Navbar__menu {
+    .menu-hamburger {
+      .slice {
+        background: $brightGreen_light;
+      }
+
+      .top {
+        background-color: $pinkish_Hamburger_light;
+      }
+
+      .bottom {
+        background-color: $pinkish_Hamburger_light;
+      }
+    }
+
+    .menu-container {
+      background-color: $lighter_Blue_light;
+
+      .list-items {
+        .menu-item {
+          &:hover {
+            color: $mainGreen_light;
+          }
+
+          &__numeral {
+            color: $mainGreen_light;
+          }
+
+          .showMenuItem {
+            color: $mainGreen_light !important;
+          }
+        }
+
+        .resume {
+          @include button_light();
+        }
+      }
+    }
+  }
 }

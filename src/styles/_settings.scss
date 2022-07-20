@@ -3,8 +3,11 @@ $tablet: 1080px;
 $phone: 780px;
 $phone_Small: 480px;
 
-//----- COLORS ------
+//----- DARK THEME ------
 $mainGreen: rgb(102, 255, 219);
+$brightGreen: #70ffea;
+
+$pinkish_Hamburger: #f92c8c;
 
 $mainBackGround: rgb(11, 26, 46);
 $lighter_Blue: rgb(17, 35, 64);
@@ -13,6 +16,24 @@ $mid_Blue: rgba(13, 31, 53, 0.96);
 $mainGrey: rgb(205, 214, 245);
 $mid_grey: rgb(170, 178, 207);
 $sub_grey: rgb(137, 146, 175);
+
+$navBar_background: #0b1a2ec4;
+
+//----- LIGHT THEME -----
+$mainGreen_light: #990024;
+$brightGreen_light: #8f0015;
+
+$pinkish_Hamburger_light: #06d373;
+
+$mainBackGround_light: #f4e5d1;
+$lighter_Blue_light: #eedcbf;
+$mid_Blue_light: #f2e0ca;
+
+$mainGrey_light: #32290a;
+$mid_grey_light: #554d30;
+$sub_grey_light: #766d50;
+
+$navBar_background_light: #f4e5d1;
 
 //----- RESET -----
 html {
@@ -35,6 +56,7 @@ body {
 // App
 .App {
   overflow: hidden;
+  background-color: $mainBackGround;
 
   // Main
   .Main {
@@ -43,7 +65,6 @@ body {
     max-width: 1600px;
     min-height: 100vh;
     padding: 155px 25px 25px 25px;
-    //background-color: #64ffdb4b;
     position: relative;
 
     @media only screen and (min-width: $phone) {
@@ -56,11 +77,9 @@ body {
 
     // Section
     section {
-      //background-color: #64ffdb32;
       margin: 100px auto;
       padding: 20px 15px;
       max-width: 11000px;
-      //min-height: 100vh;
 
       @media only screen and (min-width: $phone) {
         margin: 100px auto;
@@ -73,6 +92,10 @@ body {
       }
     }
   }
+}
+
+.light_background {
+  background-color: $mainBackGround_light;
 }
 
 body,
@@ -122,6 +145,15 @@ img {
   }
 }
 
+@mixin button_light() {
+  color: $mainGreen_light;
+  border: 1px solid $mainGreen_light;
+
+  &:hover {
+    background-color: rgba(255, 149, 100, 0.1);
+  }
+}
+
 @mixin main_Titles() {
   display: flex;
   flex-direction: row;
@@ -143,6 +175,7 @@ img {
       font-size: 20px;
     }
   }
+
   .menu-name {
     color: $mainGrey;
     font-size: 22px;
@@ -158,6 +191,7 @@ img {
       font-size: 26px;
     }
   }
+
   .line-through {
     background-color: $sub_grey;
     opacity: 0.5;
@@ -173,6 +207,20 @@ img {
     @media only screen and (min-width: $tablet) {
       max-width: 400px;
     }
+  }
+}
+
+@mixin main_Titles_light() {
+  .numeral {
+    color: $mainGreen_light;
+  }
+
+  .menu-name {
+    color: $mainGrey_light;
+  }
+
+  .line-through {
+    background-color: $sub_grey_light;
   }
 }
 

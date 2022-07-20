@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
+import ThemeContext from "../context/ThemeContext";
 
 const Introduction = ({ workRef }) => {
+  const { darkTheme } = useContext(ThemeContext);
+
   const handleClick = () => {
     const header_OffSet = 80;
     const offset_Position = workRef.current.offsetTop - header_OffSet;
@@ -9,7 +12,11 @@ const Introduction = ({ workRef }) => {
   };
 
   return (
-    <div className="introduction-container">
+    <div
+      className={`introduction-container ${
+        darkTheme ? "" : "introduction-container_light"
+      }`}
+    >
       <h1 className="header">
         <span className="header__one">Hi, my name is</span>
         <span className="header__two">Ionathan Gusmini.</span>

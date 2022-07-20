@@ -1,8 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
+import ThemeContext from "../context/ThemeContext";
 
 const Footer = () => {
+  const { darkTheme } = useContext(ThemeContext);
+
   return (
-    <div className="footer-container">
+    <div
+      className={`footer-container ${
+        darkTheme ? "" : "footer-container_light"
+      }`}
+    >
       <div className="floating-email">
         <span className="floating-email__detail">
           <a

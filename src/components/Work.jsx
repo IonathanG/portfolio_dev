@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
+import ThemeContext from "../context/ThemeContext";
 
 const Work = (props, ref) => {
+  const { darkTheme } = useContext(ThemeContext);
+
   const projectList = [
     {
       title: "E-Commerce Shopping",
@@ -38,7 +41,10 @@ const Work = (props, ref) => {
   ];
 
   return (
-    <section ref={ref} className="work-container">
+    <section
+      ref={ref}
+      className={`work-container ${darkTheme ? "" : "work-container_light"}`}
+    >
       <header>
         <span className="numeral">03.</span>
         <span className="menu-name">Some Things I've Built </span>
