@@ -5,35 +5,39 @@ $phone_Small: 480px;
 
 //----- DARK THEME ------
 $mainGreen: rgb(102, 255, 219);
-$brightGreen: #70ffea;
+$greenishBackground: rgba(100, 255, 219, 0.1);
+$brightGreen: rgb(112, 255, 234);
 
-$pinkish_Hamburger: #f92c8c;
+$green_overlay: rgba(100, 255, 219, 0.4);
+
+$pinkish_Hamburger: rgb(249, 44, 140);
 
 $mainBackGround: rgb(11, 26, 46);
 $lighter_Blue: rgb(17, 35, 64);
-$mid_Blue: rgba(13, 31, 53, 0.96);
 
 $mainGrey: rgb(205, 214, 245);
 $mid_grey: rgb(170, 178, 207);
 $sub_grey: rgb(137, 146, 175);
 
-$navBar_background: #0b1a2ec4;
+$navBar_background: rgba(11, 26, 46, 0.77);
 
 //----- LIGHT THEME -----
-$mainGreen_light: #990024;
-$brightGreen_light: #8f0015;
+$mainGreen_light: #7f00df;
+$greenishBackground_light: rgba(169, 221, 236, 0.2);
+$brightGreen_light: rgb(117, 1, 206);
 
-$pinkish_Hamburger_light: #06d373;
+$green_overlay_light: rgba(138, 204, 214, 0.4);
 
-$mainBackGround_light: #f4e5d1;
-$lighter_Blue_light: #eedcbf;
-$mid_Blue_light: #f2e0ca;
+$pinkish_Hamburger_light: rgb(108, 175, 185);
 
-$mainGrey_light: #32290a;
-$mid_grey_light: #554d30;
-$sub_grey_light: #766d50;
+$mainBackGround_light: rgb(235, 241, 245);
+$lighter_Blue_light: rgb(238, 243, 243);
 
-$navBar_background_light: #f4e5d1;
+$mainGrey_light: rgb(15, 27, 97);
+$mid_grey_light: rgb(45, 55, 115);
+$sub_grey_light: rgb(15, 27, 97);
+
+$navBar_background_light: rgba(244, 249, 252, 0.77);
 
 //----- RESET -----
 html {
@@ -141,7 +145,7 @@ img {
   letter-spacing: 1px;
 
   &:hover {
-    background-color: rgba(100, 255, 219, 0.1);
+    background-color: $greenishBackground;
   }
 }
 
@@ -150,7 +154,7 @@ img {
   border: 1px solid $mainGreen_light;
 
   &:hover {
-    background-color: rgba(255, 149, 100, 0.1);
+    background-color: $greenishBackground_light;
   }
 }
 
@@ -220,7 +224,7 @@ img {
   }
 
   .line-through {
-    background-color: $sub_grey_light;
+    background-color: $mainGreen_light;
   }
 }
 

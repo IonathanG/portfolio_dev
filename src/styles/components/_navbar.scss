@@ -21,11 +21,11 @@
     padding: 0 45px;
   }
 
-  &__logo {
+  &__theme {
     cursor: pointer;
-    .logo {
-      height: 100%;
-      width: 45px;
+    .switch-theme {
+      // height: 100%;
+      // width: 45px;
     }
   }
 
@@ -207,6 +207,10 @@
 
     .menu-container {
       background-color: $lighter_Blue_light;
+
+      @media only screen and (min-width: $phone) {
+        background-color: transparent;
+      }
 
       .list-items {
         .menu-item {

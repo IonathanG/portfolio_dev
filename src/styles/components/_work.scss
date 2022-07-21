@@ -68,7 +68,7 @@
           z-index: 10;
 
           @media only screen and (min-width: $phone) {
-            background-color: rgba(100, 255, 219, 0.4);
+            background-color: $green_overlay;
           }
         }
 
@@ -243,7 +243,7 @@
 
         &::after {
           @media only screen and (min-width: $phone) {
-            background-color: rgba(255, 247, 100, 0.4);
+            background-color: $green_overlay_light;
           }
         }
       }
@@ -277,8 +277,12 @@
             }
 
             svg {
-              &:hover path {
-                fill: $mainGreen_light;
+              filter: invert(72%) sepia(13%) saturate(3758%) hue-rotate(184deg)
+                brightness(96%) contrast(67%);
+
+              &:hover {
+                filter: invert(29%) sepia(99%) saturate(8253%)
+                  hue-rotate(265deg) brightness(62%) contrast(164%);
               }
             }
           }

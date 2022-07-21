@@ -138,9 +138,10 @@ const Navbar = ({ aboutRef, skillsRef, workRef, contactRef }) => {
           darkTheme ? "" : "Navbar_light"
         } `}
       >
-        <div className="Navbar__logo">
-          <img className="logo" src="logo/logo.svg" alt="logo" />
-          <button onClick={switchTheme}>SWITCH THEME</button>
+        <div className="Navbar__theme">
+          <button className="switch-theme" onClick={switchTheme}>
+            SWITCH THEME
+          </button>
         </div>
         <div className="Navbar__menu">
           <div className="menu-hamburger" onClick={handleMenu} ref={btnRef}>
