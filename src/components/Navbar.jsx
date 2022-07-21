@@ -138,11 +138,24 @@ const Navbar = ({ aboutRef, skillsRef, workRef, contactRef }) => {
           darkTheme ? "" : "Navbar_light"
         } `}
       >
-        <div className="Navbar__theme">
-          <button className="switch-theme" onClick={switchTheme}>
-            SWITCH THEME
-          </button>
+        <div className="Navbar__left">
+          {/* <img className="logo" src="/logo/logo.svg" alt="logo" /> */}
+          <div className="logo" alt="logo">
+            <span>I</span>
+            <span>|</span>
+            <span>G</span>
+          </div>
+
+          <div className="switch-theme" onClick={switchTheme}>
+            <img
+              src={`${
+                !darkTheme ? "/icons/dark_icon.svg" : "/icons/bright_icon.svg"
+              }`}
+              alt="color_theme_icon"
+            />
+          </div>
         </div>
+
         <div className="Navbar__menu">
           <div className="menu-hamburger" onClick={handleMenu} ref={btnRef}>
             <div className={`slice ${showMenu ? "top" : ""}`}></div>
