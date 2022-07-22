@@ -36,8 +36,13 @@
   p {
     margin-top: 25px;
     line-height: 28px;
-    max-width: 50ch;
+    max-width: 55ch;
     font-size: 17px;
+    letter-spacing: 0.5px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
   }
 
   .introduction-button {

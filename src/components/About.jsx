@@ -18,26 +18,37 @@ const About = (props, ref) => {
       <div className="about-main">
         <div className="about-main__details">
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo,
-            quisquam perspiciatis fugit nesciunt quasi quod itaque nostrum omnis
-            atque? Velit quasi eaque fugiat? Placeat consequatur doloremque
-            explicabo nam sed odio, est repellat illum impedit voluptatibus
-            nihil dignissimos ullam non molestiae quae quibusdam magni rerum
-            quia illo quidem saepe quos accusantium?
+            A curiosity-driven Front-End Developer. <br />
+            I'm a world traveler turned Developer and photography enthusiast.{" "}
+            <br />
+            I am a Junior Developer career pivoting from the travel industry,
+            with experience working with Rails. My previous career as a team
+            leader and entrepreneur allowed me to be collaborative and creative,
+            which is something I now enjoy bringing to my code. I am empathetic,
+            approachable and an active listener; traits that allow me to create
+            great projects and build relationships along the way.
+            <br />
+            The valleys of rural Wales aren't quite Silicon Valley, but growing
+            up out here gives you a lot of space to think. When I wasn't out
+            exploring the mountains, I was teaching myself to code. <br />
+            Graduating university with a degree in Japanese and Web Production
+            in 2007, I swapped Pen Y Fan for Mt. Fuji, and moved to Japan where
+            I spent time working in the emerging Tokyo startup scene. After I
+            came back to the UK, I joined one of the South West’s leading
+            digital agencies and worked my way up to lead their frontend
+            development team. <br />
           </p>
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam
-            doloribus molestias neque eius at vitae commodi dolorem iure
-            voluptate laborum velit facere eligendi ab totam quis modi debitis
-            quo voluptatem, unde aliquid perferendis explicabo? Aspernatur
-            nesciunt quae dolorum? Praesentium eos quam porro maiores
-            voluptatibus maxime corporis incidunt repellat nihil distinctio.
+            Serial world traveler and language-botherer <br />
+            Beyond coding, I have love for a different syntax - I am fascinated
+            by linguistics ...
+            <br />
           </p>
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            Consectetur quibusdam dolores eligendi fuga est dolorum, eius beatae
-            ullam, illo odio sed assumenda ipsum in voluptatem ipsam eveniet,
-            provident qui voluptatibus.
+            Photography. Outside of my work I like to spend as much time as I
+            can travelling and getting out and about with my camera. I shoot
+            with a Sony A7 III and a few prime lenses, and sometimes go on wild
+            adventures.
           </p>
         </div>
         <img

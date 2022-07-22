@@ -17,7 +17,7 @@ const Skills = (props, ref) => {
         <span className="line-through"></span>
       </header>
       <div className="skills-main">
-        Here are a few technologies I’ve been working with recently:
+        The skills, tools and technologies I use to bring products to life:
         {darkTheme && (
           <ul className="skills-list">
             <li>
