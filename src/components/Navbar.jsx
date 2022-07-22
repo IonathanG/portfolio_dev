@@ -74,15 +74,18 @@ const Navbar = ({ aboutRef, skillsRef, workRef, contactRef }) => {
 
     switch (menuIndex) {
       case 0:
-        offset_Position = aboutRef.current.offsetTop - header_OffSet;
+        offset_Position = 0;
         break;
       case 1:
-        offset_Position = skillsRef.current.offsetTop - header_OffSet;
+        offset_Position = aboutRef.current.offsetTop - header_OffSet;
         break;
       case 2:
-        offset_Position = workRef.current.offsetTop - header_OffSet;
+        offset_Position = skillsRef.current.offsetTop - header_OffSet;
         break;
       case 3:
+        offset_Position = workRef.current.offsetTop - header_OffSet;
+        break;
+      case 4:
         offset_Position = contactRef.current.offsetTop - header_OffSet;
         break;
       default:
@@ -140,7 +143,7 @@ const Navbar = ({ aboutRef, skillsRef, workRef, contactRef }) => {
       >
         <div className="Navbar__left">
           {/* <img className="logo" src="/logo/logo.svg" alt="logo" /> */}
-          <div className="logo" alt="logo">
+          <div onClick={() => handleClick(0)} className="logo" alt="logo">
             <span>I</span>
             <span>|</span>
             <span>G</span>
@@ -167,19 +170,19 @@ const Navbar = ({ aboutRef, skillsRef, workRef, contactRef }) => {
             ref={containerRef}
           >
             <ul className="list-items" ref={menuRef}>
-              <li className="menu-item" onClick={() => handleClick(0)}>
+              <li className="menu-item" onClick={() => handleClick(1)}>
                 <span className="menu-item__numeral">01. </span>{" "}
                 <span className={showAbout ? "showMenuItem" : ""}>About</span>
               </li>
-              <li className="menu-item" onClick={() => handleClick(1)}>
+              <li className="menu-item" onClick={() => handleClick(2)}>
                 <span className="menu-item__numeral">02. </span>{" "}
                 <span className={showSkills ? "showMenuItem" : ""}>Skills</span>
               </li>
-              <li className="menu-item" onClick={() => handleClick(2)}>
+              <li className="menu-item" onClick={() => handleClick(3)}>
                 <span className="menu-item__numeral">03. </span>{" "}
                 <span className={showWork ? "showMenuItem" : ""}>Work</span>
               </li>
-              <li className="menu-item" onClick={() => handleClick(3)}>
+              <li className="menu-item" onClick={() => handleClick(4)}>
                 <span className="menu-item__numeral">04. </span>{" "}
                 <span className={showContact ? "showMenuItem" : ""}>
                   Contact
