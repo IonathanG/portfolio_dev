@@ -189,10 +189,12 @@
 
             svg {
               width: 30px;
+              filter: drop-shadow(1px 1px 1px rgba(168, 167, 167, 0.3));
 
               &:hover path {
                 transition: 0.3s ease;
                 fill: $mainGreen;
+                filter: drop-shadow(1px 1px 1px rgba(0, 136, 50, 0.3));
               }
             }
           }
@@ -278,11 +280,13 @@
 
             svg {
               filter: invert(72%) sepia(13%) saturate(3758%) hue-rotate(184deg)
-                brightness(96%) contrast(67%);
+                brightness(96%) contrast(67%)
+                drop-shadow(1px 1px 1px rgba(19, 16, 74, 0.2));
 
               &:hover {
                 filter: invert(29%) sepia(99%) saturate(8253%)
-                  hue-rotate(265deg) brightness(62%) contrast(164%);
+                  hue-rotate(265deg) brightness(62%) contrast(164%)
+                  drop-shadow(1px 1px 1px rgba(90, 8, 122, 0.3));
               }
             }
           }

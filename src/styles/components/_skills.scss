@@ -52,6 +52,7 @@
           height: 60px;
           opacity: 1;
           transition: 0.3s ease;
+          filter: drop-shadow(1px 2px 1px rgba(247, 247, 247, 0.3));
         }
       }
     }
@@ -71,6 +72,10 @@
       li {
         color: $mainGrey_light;
         //font-weight: 400;
+
+        img {
+          filter: drop-shadow(1px 2px 2px rgba(24, 18, 132, 0.2));
+        }
       }
     }
   }
