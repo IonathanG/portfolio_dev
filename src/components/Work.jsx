@@ -9,7 +9,7 @@ const Work = (props, ref) => {
       title: "E-Commerce Shopping",
       image: "images/e-commerce-screenshot_3.png",
       description:
-        "This react app is designed as a scalable full stack application E-Commerce Page. It uses a fully responsive UI Design. Each user can create an account and save items onto their shopping cart and onto a wishlist in Firestore linked to their personal profile.",
+        "This react app is designed as a scalable full stack E-Commerce Page. It uses a fully responsive UI Design. Each user can create an account and save items onto their shopping cart and onto a wishlist in Firestore linked to their personal profile.",
       tech: [
         "React",
         "Sass",
@@ -27,8 +27,15 @@ const Work = (props, ref) => {
       title: "E-Commerce Shopping",
       image: "images/e-commerce-screenshot_3.png",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam laborum iusto, accusamus repudiandae voluptatibus facere enim unde animi eum quisquam tempore officiis?",
-      tech: ["React", "Sass", "Redux-Toolkit", "Context-API", "Firebase"],
+        "This react app is designed as a scalable full stack E-Commerce Page. It uses a fully responsive UI Design. Each user can create an account and save items onto their shopping cart and onto a wishlist in Firestore linked to their personal profile.",
+      tech: [
+        "React",
+        "Sass",
+        "Redux-Toolkit",
+        "Context-API",
+        "Firebase",
+        "CRUD",
+      ],
       links: [
         "https://github.com/IonathanG/react-ecommerce-redux-back",
         "https://react-ecommerce-ionyshop.netlify.app/",
@@ -38,8 +45,15 @@ const Work = (props, ref) => {
       title: "E-Commerce Shopping",
       image: "images/e-commerce-screenshot_3.png",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam laborum iusto, accusamus repudiandae voluptatibus facere enim unde animi eum quisquam tempore officiis?",
-      tech: ["React", "Sass", "Redux-Toolkit", "Context-API", "Firebase"],
+        "This react app is designed as a scalable full stack E-Commerce Page. It uses a fully responsive UI Design. Each user can create an account and save items onto their shopping cart and onto a wishlist in Firestore linked to their personal profile.",
+      tech: [
+        "React",
+        "Sass",
+        "Redux-Toolkit",
+        "Context-API",
+        "Firebase",
+        "CRUD",
+      ],
       links: [
         "https://github.com/IonathanG/react-ecommerce-redux-back",
         "https://react-ecommerce-ionyshop.netlify.app/",
