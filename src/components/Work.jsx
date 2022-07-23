@@ -141,8 +141,14 @@ const Work = (props, ref) => {
           </div>
         ))}
       </div>
-      <h3>Other Noteworthy Projects:</h3>
-      <h3>Upcoming projects and currently working on:</h3>
+      <div className="work-container__extra">
+        <div className="work-container__extra--title">
+          Other Noteworthy Projects: (coming soon)
+        </div>
+        <div className="work-container__extra--title">
+          Upcoming projects: (coming soon)
+        </div>
+      </div>
     </section>
   );
 };

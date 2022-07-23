@@ -97,7 +97,7 @@ const Footer = () => {
       </div>
       <div className="designed-by">
         <a href="https://github.com/IonathanG" target="_blank" rel="noreferrer">
-          Designed and Built by <span> Ionathan Gusmini</span>
+          Coded and Built by <span> Ionathan Gusmini</span>
         </a>
       </div>
     </div>

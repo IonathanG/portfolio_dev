@@ -26,8 +26,8 @@ $mainGreen_light: rgb(127, 0, 223);
 $greenishBackground_light: rgba(169, 221, 236, 0.2);
 $brightGreen_light: rgb(117, 1, 206);
 
-$green_overlay_light: rgba(138, 204, 214, 0.4);
-//$green_overlay_light: rgba(199, 181, 213, 0.4);
+//$green_overlay_light: rgba(138, 204, 214, 0.4);
+$green_overlay_light: rgba(227, 219, 241, 0.594);
 
 $pinkish_Hamburger_light: rgb(108, 175, 185);
 
@@ -84,7 +84,7 @@ body {
     section {
       margin: 100px auto;
       padding: 20px 15px;
-      max-width: 11000px;
+      //max-width: 11000px;
 
       @media only screen and (min-width: $phone) {
         margin: 100px auto;
@@ -96,6 +96,23 @@ body {
         padding: 50px 0;
       }
     }
+
+    // --------------------------
+    // Fade in component on scroll
+    // .fade-in-section {
+    //   opacity: 0;
+    //   transform: translateY(8vh);
+    //   visibility: hidden;
+    //   transition: opacity 0.6s ease-out, transform 1.2s ease-out;
+    //   will-change: opacity, visibility;
+    // }
+
+    // .fade-in-section.is-visible {
+    //   opacity: 1;
+    //   transform: none;
+    //   visibility: visible;
+    // }
+    // --------------------------
   }
 }
 

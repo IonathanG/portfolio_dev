@@ -33,16 +33,23 @@
     }
   }
 
-  p {
+  &__main {
     margin-top: 25px;
-    line-height: 28px;
-    max-width: 55ch;
-    font-size: 17px;
-    letter-spacing: 0.5px;
 
     display: flex;
     flex-direction: column;
     gap: 12px;
+
+    p {
+      max-width: 55ch;
+      line-height: 28px;
+      font-size: 17px;
+      letter-spacing: 0.5px;
+
+      span {
+        color: $mainGreen;
+      }
+    }
   }
 
   .introduction-button {
@@ -69,6 +76,12 @@
     &__three {
       color: $pinkish_Hamburger_light;
       //opacity: 0.8;
+    }
+  }
+
+  .introduction-container__main {
+    span {
+      color: $mainGreen_light;
     }
   }
 

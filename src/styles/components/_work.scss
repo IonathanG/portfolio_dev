@@ -224,6 +224,22 @@
       }
     }
   }
+
+  &__extra {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+
+    &--title {
+      font-family: sans-serif;
+      color: $mainGrey;
+      font-size: 19px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+  }
 }
 
 // light theme
@@ -236,8 +252,6 @@
     color: $sub_grey_light;
 
     &__item {
-      //padding: 10px;
-      //box-shadow: 0 7px 4px rgba(0, 0, 0, 0.2);
       box-shadow: 0px 12px 10px -15px rgb(17, 17, 17);
 
       @media only screen and (min-width: $phone) {
@@ -300,6 +314,12 @@
           }
         }
       }
+    }
+  }
+
+  .work-container__extra {
+    .work-container__extra--title {
+      color: $mainGrey_light;
     }
   }
 }

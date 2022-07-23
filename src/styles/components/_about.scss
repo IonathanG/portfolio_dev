@@ -90,5 +90,19 @@
   }
   .about-main {
     color: $sub_grey_light;
+
+    &__details {
+      p > span {
+        color: $mainGreen_light;
+      }
+
+      p:nth-child(1),
+      :nth-child(7) {
+        color: $mainGrey_light;
+      }
+      .line-through {
+        background-color: $sub_grey_light;
+      }
+    }
   }
 }

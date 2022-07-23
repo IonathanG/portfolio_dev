@@ -51,12 +51,12 @@ const Contact = (props, ref) => {
       <div className="contact-main">
         <div className="contact-main__left">
           <span>
-            I am always looking for new opportunities, my inbox is always open.
+            I am always looking for new opportunities. Whether you have a
+            question, a new project idea or just want to say hi, I’ll get back
+            to you!
           </span>
-          <span>
-            Whether you have a question, a new project idea or just want to say
-            hi, I’ll get back to you!
-          </span>
+          {/* <span>
+          </span> */}
           <span>Fill in your info and I look forward to hearing from you!</span>
           <span className="social-links">
             <span className="github">
