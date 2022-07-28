@@ -19,7 +19,7 @@ const Navbar = ({ aboutRef, skillsRef, workRef, contactRef }) => {
 
   // open/close side menu when hamburger is clicked
   const handleMenu = () => {
-    setShowMenu((prevState) => !prevState);
+    setShowMenu(!showMenu);
   };
 
   // disable scrolling on the body when menu is open
@@ -132,7 +132,8 @@ const Navbar = ({ aboutRef, skillsRef, workRef, contactRef }) => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  });
+    // eslint-disable-next-line
+  }, []);
 
   return (
     <>
@@ -142,7 +143,6 @@ const Navbar = ({ aboutRef, skillsRef, workRef, contactRef }) => {
         } `}
       >
         <div className="Navbar__left">
-          {/* <img className="logo" src="/logo/logo.svg" alt="logo" /> */}
           <div onClick={() => handleClick(0)} className="logo" alt="logo">
             <span>I</span>
             <span>|</span>
@@ -192,7 +192,14 @@ const Navbar = ({ aboutRef, skillsRef, workRef, contactRef }) => {
                 className="menu-item resume"
                 onClick={() => setShowMenu(false)}
               >
-                Resume
+                <a
+                  href="resume/resume_Ionathan_Gusmini.pdf"
+                  target="_blank"
+                  rel="noreferrer"
+                  alt="email-link"
+                >
+                  Resume
+                </a>
               </li>
             </ul>
           </div>

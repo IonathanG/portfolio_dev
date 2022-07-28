@@ -54,7 +54,6 @@
       }
 
       &:hover {
-        //border: 2px solid $mainGrey;
         background-color: $green_overlay;
       }
     }
@@ -200,6 +199,10 @@
             font-size: 13px;
             padding: 8px 18px;
           }
+
+          a {
+            color: $mainGreen;
+          }
         }
       }
     }
@@ -282,6 +285,9 @@
 
         .resume {
           @include button_light();
+          a {
+            color: $mainGreen_light;
+          }
         }
       }
     }
