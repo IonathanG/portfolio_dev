@@ -1,13 +1,13 @@
 import React, { useRef } from "react";
 import { useEffect } from "react";
 import { useContext } from "react";
-import About from "./components/About";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
-import Introduction from "./components/Introduction";
-import Navbar from "./components/Navbar";
-import Skills from "./components/Skills";
-import Work from "./components/Work";
+import About from "./components/About/About";
+import Contact from "./components/Contact/Contact";
+import Footer from "./components/Footer/Footer";
+import Introduction from "./components/Introduction/Introduction";
+import Navbar from "./components/Navbar/Navbar";
+import Skills from "./components/Skills/Skills";
+import Work from "./components/Work/Work";
 import ThemeContext from "./context/ThemeContext";
 
 function App() {

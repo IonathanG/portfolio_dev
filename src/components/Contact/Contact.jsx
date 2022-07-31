@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 import emailjs from "emailjs-com";
-import ThemeContext from "../context/ThemeContext";
+import ThemeContext from "../../context/ThemeContext";
 
 const Contact = (props, ref) => {
   const { darkTheme } = useContext(ThemeContext);

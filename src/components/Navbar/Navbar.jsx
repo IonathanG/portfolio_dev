@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState, useContext } from "react";
-import ThemeContext from "../context/ThemeContext";
+import ThemeContext from "../../context/ThemeContext";
 
 const Navbar = ({ aboutRef, skillsRef, workRef, contactRef }) => {
   const { darkTheme, switchTheme } = useContext(ThemeContext);
@@ -48,14 +48,16 @@ const Navbar = ({ aboutRef, skillsRef, workRef, contactRef }) => {
   useEffect(() => {
     let prevScroll_Pos = window.pageYOffset;
 
-    window.onscroll = () => {
-      //console.log(window.pageYOffset);
+    const toggleNavbar = () => {
       let currentScroll_Pos = window.pageYOffset;
       prevScroll_Pos < currentScroll_Pos && currentScroll_Pos > 60
         ? setShowNavbar(false)
         : setShowNavbar(true);
       prevScroll_Pos = currentScroll_Pos;
     };
+
+    window.addEventListener("scroll", toggleNavbar);
+    return () => window.removeEventListener("scroll", toggleNavbar);
   }, []);
 
   // Close Menu if window is resized >= phone size

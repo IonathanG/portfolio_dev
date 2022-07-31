@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import ThemeContext from "../context/ThemeContext";
+import ThemeContext from "../../context/ThemeContext";
 
 const About = (props, ref) => {
   const { darkTheme } = useContext(ThemeContext);
