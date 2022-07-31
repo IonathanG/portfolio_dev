@@ -8,6 +8,7 @@ const Navbar = ({ aboutRef, skillsRef, workRef, contactRef }) => {
   const [showNavbar, setShowNavbar] = useState(true);
 
   const [scrollPosition, setScrollPosition] = useState(0);
+
   const [showAbout, setShowAbout] = useState(false);
   const [showSkills, setShowSkills] = useState(false);
   const [showWork, setShowWork] = useState(false);
