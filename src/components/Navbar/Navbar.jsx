@@ -98,45 +98,46 @@ const Navbar = ({ aboutRef, skillsRef, workRef, contactRef }) => {
     window.scrollTo({ top: offset_Position, behavior: "smooth" });
   };
 
+  // monitor current scroll
   // handle menu change on scroll
   // select color of current item in display
-  const handleScroll = () => {
-    const position = window.pageYOffset;
-    setScrollPosition(position + 140);
-
-    setShowAbout(false);
-    setShowSkills(false);
-    setShowWork(false);
-    setShowContact(false);
-
-    if (
-      scrollPosition >= aboutRef.current.offsetTop &&
-      scrollPosition < skillsRef.current.offsetTop
-    ) {
-      setShowAbout(true);
-    } else if (
-      scrollPosition >= skillsRef.current.offsetTop &&
-      scrollPosition < workRef.current.offsetTop
-    ) {
-      setShowSkills(true);
-    } else if (
-      scrollPosition >= workRef.current.offsetTop &&
-      scrollPosition < contactRef.current.offsetTop
-    ) {
-      setShowWork(true);
-    } else if (scrollPosition >= contactRef.current.offsetTop) {
-      setShowContact(true);
-    }
-  };
-
-  // monitor current scroll
   useEffect(() => {
+    const handleScroll = () => {
+      console.log("test");
+      const position = window.pageYOffset;
+      setScrollPosition(position + 140);
+
+      setShowAbout(false);
+      setShowSkills(false);
+      setShowWork(false);
+      setShowContact(false);
+
+      if (
+        scrollPosition >= aboutRef.current.offsetTop &&
+        scrollPosition < skillsRef.current.offsetTop
+      ) {
+        console.log("numero1");
+        setShowAbout(true);
+      } else if (
+        scrollPosition >= skillsRef.current.offsetTop &&
+        scrollPosition < workRef.current.offsetTop
+      ) {
+        setShowSkills(true);
+      } else if (
+        scrollPosition >= workRef.current.offsetTop &&
+        scrollPosition < contactRef.current.offsetTop
+      ) {
+        setShowWork(true);
+      } else if (scrollPosition >= contactRef.current.offsetTop) {
+        setShowContact(true);
+      }
+    };
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-    // eslint-disable-next-line
-  }, []);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [scrollPosition]);
 
   return (
     <>
