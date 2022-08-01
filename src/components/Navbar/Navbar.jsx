@@ -9,6 +9,8 @@ const Navbar = ({ aboutRef, skillsRef, workRef, contactRef }) => {
 
   const [scrollPosition, setScrollPosition] = useState(0);
 
+  const [currentMenuIndex, setCurrentMenuIndex] = useState(0);
+
   const [showAbout, setShowAbout] = useState(false);
   const [showSkills, setShowSkills] = useState(false);
   const [showWork, setShowWork] = useState(false);
@@ -70,12 +72,12 @@ const Navbar = ({ aboutRef, skillsRef, workRef, contactRef }) => {
   }, []);
 
   // Close down menu on Click + Scroll down to the dedicated section
-  const handleClick = (menuIndex) => {
+  useEffect(() => {
     setShowMenu(false);
     const header_OffSet = 80;
     let offset_Position = 0;
 
-    switch (menuIndex) {
+    switch (currentMenuIndex) {
       case 0:
         offset_Position = 0;
         break;
@@ -96,14 +98,11 @@ const Navbar = ({ aboutRef, skillsRef, workRef, contactRef }) => {
     }
 
     window.scrollTo({ top: offset_Position, behavior: "smooth" });
-  };
+  }, [currentMenuIndex, aboutRef, skillsRef, workRef, contactRef]);
 
-  // monitor current scroll
-  // handle menu change on scroll
-  // select color of current item in display
+  // -- change color of current menu item in display // monitor current scroll --
   useEffect(() => {
     const handleScroll = () => {
-      console.log("test");
       const position = window.pageYOffset;
       setScrollPosition(position + 140);
 
@@ -116,7 +115,6 @@ const Navbar = ({ aboutRef, skillsRef, workRef, contactRef }) => {
         scrollPosition >= aboutRef.current.offsetTop &&
         scrollPosition < skillsRef.current.offsetTop
       ) {
-        console.log("numero1");
         setShowAbout(true);
       } else if (
         scrollPosition >= skillsRef.current.offsetTop &&
@@ -136,8 +134,7 @@ const Navbar = ({ aboutRef, skillsRef, workRef, contactRef }) => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [scrollPosition]);
+  });
 
   return (
     <>
@@ -147,7 +144,11 @@ const Navbar = ({ aboutRef, skillsRef, workRef, contactRef }) => {
         } `}
       >
         <div className="Navbar__left">
-          <div onClick={() => handleClick(0)} className="logo" alt="logo">
+          <div
+            onClick={() => setCurrentMenuIndex(0)}
+            className="logo"
+            alt="logo"
+          >
             <span>I</span>
             <span>|</span>
             <span>G</span>
@@ -174,19 +175,19 @@ const Navbar = ({ aboutRef, skillsRef, workRef, contactRef }) => {
             ref={containerRef}
           >
             <ul className="list-items" ref={menuRef}>
-              <li className="menu-item" onClick={() => handleClick(1)}>
+              <li className="menu-item" onClick={() => setCurrentMenuIndex(1)}>
                 <span className="menu-item__numeral">01. </span>{" "}
                 <span className={showAbout ? "showMenuItem" : ""}>About</span>
               </li>
-              <li className="menu-item" onClick={() => handleClick(2)}>
+              <li className="menu-item" onClick={() => setCurrentMenuIndex(2)}>
                 <span className="menu-item__numeral">02. </span>{" "}
                 <span className={showSkills ? "showMenuItem" : ""}>Skills</span>
               </li>
-              <li className="menu-item" onClick={() => handleClick(3)}>
+              <li className="menu-item" onClick={() => setCurrentMenuIndex(3)}>
                 <span className="menu-item__numeral">03. </span>{" "}
                 <span className={showWork ? "showMenuItem" : ""}>Work</span>
               </li>
-              <li className="menu-item" onClick={() => handleClick(4)}>
+              <li className="menu-item" onClick={() => setCurrentMenuIndex(4)}>
                 <span className="menu-item__numeral">04. </span>{" "}
                 <span className={showContact ? "showMenuItem" : ""}>
                   Contact
