@@ -1,5 +1,23 @@
 import React, { useEffect, useRef, useState, useContext } from "react";
-import ThemeContext from "../../context/ThemeContext";
+import {
+  StyledNavbar,
+  NavbarLeft,
+  Logo,
+  ToggleTheme,
+  Menu,
+  MenuHamburger,
+  TopSlice,
+  BottomSlice,
+  MiddleSlice,
+  MenuContainer,
+  ListItems,
+  MenuItem,
+  NavNumeral,
+  MenuName,
+  Resume,
+  LayerBackgroundDim,
+} from "./styles/Navbar.styled.js";
+import ThemeContext from "../context/ThemeContext";
 
 const Navbar = ({ aboutRef, skillsRef, workRef, contactRef }) => {
   const { darkTheme, switchTheme } = useContext(ThemeContext);
@@ -138,13 +156,9 @@ const Navbar = ({ aboutRef, skillsRef, workRef, contactRef }) => {
 
   return (
     <>
-      <div
-        className={`Navbar ${showNavbar ? "" : "hide-Navbar"} ${
-          darkTheme ? "" : "Navbar_light"
-        } `}
-      >
-        <div className="Navbar__left">
-          <div
+      <StyledNavbar showNavbar={showNavbar}>
+        <NavbarLeft>
+          <Logo
             onClick={() => setCurrentMenuIndex(0)}
             className="logo"
             alt="logo"
@@ -152,65 +166,55 @@ const Navbar = ({ aboutRef, skillsRef, workRef, contactRef }) => {
             <span>I</span>
             <span>|</span>
             <span>G</span>
-          </div>
+          </Logo>
+          <ToggleTheme
+            onClick={switchTheme}
+            src={`${
+              !darkTheme ? "/icons/dark_icon.svg" : "/icons/bright_icon.svg"
+            }`}
+            alt="color_theme_icon"
+          ></ToggleTheme>
+        </NavbarLeft>
+        <Menu>
+          <MenuHamburger onClick={handleMenu} ref={btnRef}>
+            <TopSlice showMenu={showMenu}></TopSlice>
+            <MiddleSlice showMenu={showMenu}></MiddleSlice>
+            <BottomSlice showMenu={showMenu}></BottomSlice>
+          </MenuHamburger>
 
-          <div className="switch-theme" onClick={switchTheme}>
-            <img
-              src={`${
-                !darkTheme ? "/icons/dark_icon.svg" : "/icons/bright_icon.svg"
-              }`}
-              alt="color_theme_icon"
-            />
-          </div>
-        </div>
-
-        <div className="Navbar__menu">
-          <div className="menu-hamburger" onClick={handleMenu} ref={btnRef}>
-            <div className={`slice ${showMenu ? "top" : ""}`}></div>
-            <div className={`slice ${showMenu ? "middle" : ""}`}></div>
-            <div className={`slice ${showMenu ? "bottom" : ""}`}></div>
-          </div>
-          <div
-            className={`menu-container ${showMenu ? "show-menu" : ""}`}
-            ref={containerRef}
-          >
-            <ul className="list-items" ref={menuRef}>
-              <li className="menu-item" onClick={() => setCurrentMenuIndex(1)}>
-                <span className="menu-item__numeral">01. </span>{" "}
-                <span className={showAbout ? "showMenuItem" : ""}>About</span>
-              </li>
-              <li className="menu-item" onClick={() => setCurrentMenuIndex(2)}>
-                <span className="menu-item__numeral">02. </span>{" "}
-                <span className={showSkills ? "showMenuItem" : ""}>Skills</span>
-              </li>
-              <li className="menu-item" onClick={() => setCurrentMenuIndex(3)}>
-                <span className="menu-item__numeral">03. </span>{" "}
-                <span className={showWork ? "showMenuItem" : ""}>Work</span>
-              </li>
-              <li className="menu-item" onClick={() => setCurrentMenuIndex(4)}>
-                <span className="menu-item__numeral">04. </span>{" "}
-                <span className={showContact ? "showMenuItem" : ""}>
-                  Contact
-                </span>
-              </li>
-              <li
-                className="menu-item resume"
-                onClick={() => setShowMenu(false)}
-              >
-                <a
+          <MenuContainer showMenu={showMenu} ref={containerRef}>
+            <ListItems ref={menuRef}>
+              <MenuItem onClick={() => setCurrentMenuIndex(1)}>
+                <NavNumeral>01. </NavNumeral>{" "}
+                <MenuName isActive={showAbout}>About</MenuName>
+              </MenuItem>
+              <MenuItem onClick={() => setCurrentMenuIndex(2)}>
+                <NavNumeral>02. </NavNumeral>{" "}
+                <MenuName isActive={showSkills}>Skills</MenuName>
+              </MenuItem>
+              <MenuItem onClick={() => setCurrentMenuIndex(3)}>
+                <NavNumeral>03. </NavNumeral>{" "}
+                <MenuName isActive={showWork}>Work</MenuName>
+              </MenuItem>
+              <MenuItem onClick={() => setCurrentMenuIndex(4)}>
+                <NavNumeral>04. </NavNumeral>{" "}
+                <MenuName isActive={showContact}>Contact</MenuName>
+              </MenuItem>
+              <MenuItem onClick={() => setShowMenu(false)}>
+                <Resume
                   href="resume/resume_Ionathan_Gusmini.pdf"
                   target="_blank"
                   rel="noreferrer"
                   alt="email-link"
                 >
                   Resume
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      {showMenu && <div className="layer-dim"></div>}
+                </Resume>
+              </MenuItem>
+            </ListItems>
+          </MenuContainer>
+        </Menu>
+      </StyledNavbar>
+      {showMenu && <LayerBackgroundDim></LayerBackgroundDim>}
     </>
   );
 };

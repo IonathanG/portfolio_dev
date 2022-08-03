@@ -1,8 +1,17 @@
-import React, { useContext } from "react";
-import ThemeContext from "../../context/ThemeContext";
+import React from "react";
+//import ThemeContext from "../context/ThemeContext";
+import {
+  StyledIntroduction,
+  HeaderTitle,
+  TitleOne,
+  TitleTwo,
+  TitleThree,
+  ContainerIntroduction,
+  ButtonIntroduction,
+} from "./styles/Introduction.styled";
 
 const Introduction = ({ workRef }) => {
-  const { darkTheme } = useContext(ThemeContext);
+  //const { darkTheme } = useContext(ThemeContext);
 
   const handleClick = () => {
     const header_OffSet = 80;
@@ -12,17 +21,13 @@ const Introduction = ({ workRef }) => {
   };
 
   return (
-    <div
-      className={`introduction-container ${
-        darkTheme ? "" : "introduction-container_light"
-      }`}
-    >
-      <h1 className="header">
-        <span className="header__one">Hi, my name is</span>
-        <span className="header__two">Ionathan Gusmini.</span>
-        <span className="header__three">I build things for the Web.</span>
-      </h1>
-      <div className="introduction-container__main">
+    <StyledIntroduction>
+      <HeaderTitle>
+        <TitleOne>Hi, my name is</TitleOne>
+        <TitleTwo>Ionathan Gusmini.</TitleTwo>
+        <TitleThree>I build things for the Web.</TitleThree>
+      </HeaderTitle>
+      <ContainerIntroduction>
         <p>
           I'm a multidisciplinary developer with a passion for creating
           engaging, <span> entertaining user experiences.</span>
@@ -35,12 +40,12 @@ const Introduction = ({ workRef }) => {
           When I'm not coding, you'll find me hiking in the wild with a camera
           in my hands or studying languages at the coffee shop.
         </p>
-      </div>
+      </ContainerIntroduction>
 
-      <button className="introduction-button" onClick={handleClick}>
+      <ButtonIntroduction onClick={handleClick}>
         Checkout my work!
-      </button>
-    </div>
+      </ButtonIntroduction>
+    </StyledIntroduction>
   );
 };
 

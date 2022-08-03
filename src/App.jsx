@@ -1,14 +1,16 @@
-import React, { useRef } from "react";
-import { useEffect } from "react";
-import { useContext } from "react";
-import About from "./components/About/About";
-import Contact from "./components/Contact/Contact";
-import Footer from "./components/Footer/Footer";
-import Introduction from "./components/Introduction/Introduction";
-import Navbar from "./components/Navbar/Navbar";
-import Skills from "./components/Skills/Skills";
-import Work from "./components/Work/Work";
-import ThemeContext from "./context/ThemeContext";
+import { GlobalStyles } from "./components/styles/globalStyles";
+import React, { useRef, useState } from "react";
+import { ThemeProvider } from "styled-components";
+import Navbar from "./components/Navbar";
+import Introduction from "./components/Introduction";
+import About from "./components/About";
+import Skills from "./components/Skills";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
+import Work from "./components/Work";
+import { darkTheme, lightTheme } from "./components/styles/Theme";
+import { AppContainer } from "./components/styles/App.styled";
+import { MainContent } from "./components/styles/App.styled";
 
 function App() {
   // refs used for scrolling to the matching component
@@ -17,33 +19,34 @@ function App() {
   const workRef = useRef(null);
   const contactRef = useRef(null);
 
-  const { darkTheme } = useContext(ThemeContext);
+  //const { darkTheme } = useContext(ThemeContext);
 
-  useEffect(() => {
-    if (darkTheme) {
-      document.querySelector("body").classList.remove("light_background");
-    } else {
-      document.querySelector("body").classList.add("light_background");
-    }
-  }, [darkTheme]);
+  const theme = useState("dark");
+
+  const themeMode = theme === "light" ? lightTheme : darkTheme;
 
   return (
-    <div className={`App ${darkTheme ? "" : "light_background"}`}>
-      <Navbar
-        aboutRef={aboutRef}
-        skillsRef={skillsRef}
-        workRef={workRef}
-        contactRef={contactRef}
-      />
-      <div className="Main">
-        <Introduction workRef={workRef} />
-        <About ref={aboutRef} />
-        <Skills ref={skillsRef} />
-        <Work ref={workRef} />
-        <Contact ref={contactRef} />
-        <Footer />
-      </div>
-    </div>
+    <ThemeProvider theme={themeMode}>
+      <>
+        <GlobalStyles />
+        <AppContainer>
+          <Navbar
+            aboutRef={aboutRef}
+            skillsRef={skillsRef}
+            workRef={workRef}
+            contactRef={contactRef}
+          />
+          <MainContent>
+            <Introduction workRef={workRef} />
+            <About ref={aboutRef} />
+            <Skills ref={skillsRef} />
+            <Work ref={workRef} />
+            <Contact ref={contactRef} />
+            <Footer />
+          </MainContent>
+        </AppContainer>
+      </>
+    </ThemeProvider>
   );
 }
 

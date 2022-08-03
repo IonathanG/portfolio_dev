@@ -1,22 +1,26 @@
-import React, { useContext } from "react";
-import ThemeContext from "../../context/ThemeContext";
+import React from "react";
+//import ThemeContext from "../context/ThemeContext";
+import { Title, Numeral, MenuName, LineThrough } from "./styles/Titles.styled";
+import {
+  StyledAbout,
+  ContainerAbout,
+  AboutDetails,
+  AboutImage,
+} from "./styles/About.styled";
 
 const About = (props, ref) => {
-  const { darkTheme } = useContext(ThemeContext);
+  //const { darkTheme } = useContext(ThemeContext);
 
   return (
-    <section
-      ref={ref}
-      className={`about-container ${darkTheme ? "" : "about-container_light"}`}
-    >
-      <header>
-        <span className="numeral">01.</span>
-        <span className="menu-name">About Me </span>
-        <span className="line-through"></span>
-      </header>
+    <StyledAbout ref={ref}>
+      <Title>
+        <Numeral>01.</Numeral>
+        <MenuName>About Me </MenuName>
+        <LineThrough></LineThrough>
+      </Title>
 
-      <div className="about-main">
-        <div className="about-main__details">
+      <ContainerAbout>
+        <AboutDetails>
           <p> A curiosity-driven Developer.</p>
           <p>
             I am a <span>Front-End Web Developer</span>, career pivoting from
@@ -34,7 +38,7 @@ const About = (props, ref) => {
             <span> create great projects </span>
             and build relationships along the way.
           </p>
-          <div className="line-through"></div>
+          <div className="text-lineThrough"></div>
           <p>
             The valleys of rural France aren't quite Silicon Valley, but growing
             up out here gives you a lot of space to think. When I wasn't out
@@ -56,14 +60,10 @@ const About = (props, ref) => {
             and getting out and about with my camera. I shoot with a Sony A7 III
             and a few prime lenses, and sometimes go on wild adventures.
           </p>
-        </div>
-        <img
-          className="about-main__picture"
-          src="images/coding_2.jpg"
-          alt="random"
-        />
-      </div>
-    </section>
+        </AboutDetails>
+        <AboutImage src="images/coding_2.jpg" alt="random" />
+      </ContainerAbout>
+    </StyledAbout>
   );
 };
 
