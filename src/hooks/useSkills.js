@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
-import workData from "../data/workData.json";
+import skillsData from "../data/skillsData.json";
 
-const useWork = () => {
+const useSkills = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    setProducts(workData.workProjects);
+    setProducts(skillsData.SkillsData);
   }, []);
 
   return products;
 };
 
-export default useWork;
+export default useSkills;

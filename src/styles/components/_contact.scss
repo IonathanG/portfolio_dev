@@ -127,13 +127,13 @@
         span {
           svg {
             filter: invert(72%) sepia(13%) saturate(3758%) hue-rotate(184deg)
-              brightness(96%) contrast(67%)
-              drop-shadow(1px 1px 1px rgba(19, 16, 74, 0.2));
+              brightness(96%) contrast(67%);
+            //drop-shadow(1px 1px 1px rgba(19, 16, 74, 0.2));
 
             &:hover {
               filter: invert(29%) sepia(99%) saturate(8253%) hue-rotate(265deg)
-                brightness(62%) contrast(164%)
-                drop-shadow(1px 1px 1px rgba(90, 8, 122, 0.3));
+                brightness(62%) contrast(164%);
+              //drop-shadow(1px 1px 1px rgba(90, 8, 122, 0.3));
             }
           }
         }

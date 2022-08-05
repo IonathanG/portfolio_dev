@@ -1,5 +1,5 @@
 import { GlobalStyles } from "./components/styles/globalStyles";
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { ThemeProvider } from "styled-components";
 import Navbar from "./components/Navbar";
 import Introduction from "./components/Introduction";
@@ -11,19 +11,26 @@ import Work from "./components/Work";
 import { darkTheme, lightTheme } from "./components/styles/Theme";
 import { AppContainer } from "./components/styles/App.styled";
 import { MainContent } from "./components/styles/App.styled";
+import { useTheme } from "./hooks/useTheme";
 
 function App() {
-  // refs used for scrolling to the matching component
+  // ----- refs used for scrolling to the matching component -----
   const aboutRef = useRef(null);
   const skillsRef = useRef(null);
   const workRef = useRef(null);
   const contactRef = useRef(null);
+  // ----- -----
 
-  //const { darkTheme } = useContext(ThemeContext);
+  // ----- initialise and toggle theme -----
+  const { theme, toggleTheme } = useTheme();
+  const [themeMode, setThemeMode] = useState(
+    theme === "light" ? lightTheme : darkTheme
+  );
 
-  const theme = useState("dark");
-
-  const themeMode = theme === "light" ? lightTheme : darkTheme;
+  useEffect(() => {
+    setThemeMode(theme === "light" ? lightTheme : darkTheme);
+  }, [theme]);
+  // ----- -----
 
   return (
     <ThemeProvider theme={themeMode}>
@@ -35,6 +42,7 @@ function App() {
             skillsRef={skillsRef}
             workRef={workRef}
             contactRef={contactRef}
+            toggleTheme={toggleTheme}
           />
           <MainContent>
             <Introduction workRef={workRef} />

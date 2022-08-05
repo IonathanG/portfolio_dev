@@ -1,0 +1,22 @@
+{
+  "SkillsData": [
+    {
+      "id": 0,
+      "name": "Javascript (ES+6)",
+      "type": "javascript"
+    },
+    { "id": 1, "name": "React", "type": "react" },
+    { "id": 2, "name": "HTML5", "type": "html" },
+    { "id": 3, "name": "CSS3", "type": "css" },
+    { "id": 4, "name": "Sass", "type": "sass" },
+    { "id": 5, "name": "Firebase", "type": "firebase" },
+    { "id": 6, "name": "GitHub", "type": "github" },
+    { "id": 7, "name": "Redux Toolkit", "type": "redux" },
+    {
+      "id": 8,
+      "name": "Accessibility",
+      "type": "accessibility"
+    },
+    { "id": 9, "name": "Adobe Lightroom", "type": "adobe" }
+  ]
+}

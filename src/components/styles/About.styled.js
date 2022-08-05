@@ -8,14 +8,6 @@ export const StyledAbout = styled(Section)`
   max-width: 1100px !important;
 `;
 
-// export const Header = styled(Title);
-
-// export const StyledNumeral = styled(Numeral);
-
-// export const StyledMenuName = styled(MenuName);
-
-// export const StyledLineThrough = styled(LineThrough);
-
 export const ContainerAbout = styled(MainStyle)`
   color: ${({ theme }) => theme.light_Main_Color_2};
   margin: 50px auto;

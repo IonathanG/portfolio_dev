@@ -64,7 +64,9 @@ export const Logo = styled.div`
   }
 `;
 
-export const ToggleTheme = styled.img`
+export const ToggleTheme = styled.img.attrs((props) => ({
+  src: props.theme.theme_Switch_Source,
+}))`
   cursor: pointer;
   width: 50px;
   height: 50px;

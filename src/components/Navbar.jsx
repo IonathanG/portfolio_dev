@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState, useContext } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import {
   StyledNavbar,
   NavbarLeft,
@@ -17,11 +17,8 @@ import {
   Resume,
   LayerBackgroundDim,
 } from "./styles/Navbar.styled.js";
-import ThemeContext from "../context/ThemeContext";
 
-const Navbar = ({ aboutRef, skillsRef, workRef, contactRef }) => {
-  const { darkTheme, switchTheme } = useContext(ThemeContext);
-
+const Navbar = ({ aboutRef, skillsRef, workRef, contactRef, toggleTheme }) => {
   const [showMenu, setShowMenu] = useState(false);
   const [showNavbar, setShowNavbar] = useState(true);
 
@@ -158,20 +155,13 @@ const Navbar = ({ aboutRef, skillsRef, workRef, contactRef }) => {
     <>
       <StyledNavbar showNavbar={showNavbar}>
         <NavbarLeft>
-          <Logo
-            onClick={() => setCurrentMenuIndex(0)}
-            className="logo"
-            alt="logo"
-          >
+          <Logo onClick={() => setCurrentMenuIndex(0)} alt="logo">
             <span>I</span>
             <span>|</span>
             <span>G</span>
           </Logo>
           <ToggleTheme
-            onClick={switchTheme}
-            src={`${
-              !darkTheme ? "/icons/dark_icon.svg" : "/icons/bright_icon.svg"
-            }`}
+            onClick={() => toggleTheme()}
             alt="color_theme_icon"
           ></ToggleTheme>
         </NavbarLeft>
