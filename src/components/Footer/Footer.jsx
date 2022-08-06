@@ -7,11 +7,9 @@ import {
   SocialLinksFooter,
   SocialSVG,
   DesignedBy,
-} from "./styles/Footer.styled";
+} from "./Footer.styled";
 
 const Footer = () => {
-  // const { darkTheme } = useContext(ThemeContext);
-
   return (
     <StyledFooter>
       <FloatingEmail>

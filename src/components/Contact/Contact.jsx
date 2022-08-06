@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
-import { Title, Numeral, MenuName, LineThrough } from "./styles/Titles.styled";
+import {
+  Title,
+  Numeral,
+  MenuName,
+  LineThrough,
+} from "../../Shared/Titles.styled";
 import {
   StyledContact,
   ContainerContact,
@@ -12,7 +17,7 @@ import {
   TextareaContact,
   ButtonContact,
   MessageSent,
-} from "./styles/Contact.styled";
+} from "./Contact.styled";
 
 const Contact = (props, ref) => {
   //const { darkTheme } = useContext(ThemeContext);

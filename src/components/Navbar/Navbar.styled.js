@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { device } from "./breakpoints";
-import { Button } from "./Button.styled";
+import { device } from "../../Shared/breakpoints";
+import { Button } from "../../Shared/Button.styled";
 
 export const StyledNavbar = styled.div`
   color: ${({ theme }) => theme.main_Color_2};

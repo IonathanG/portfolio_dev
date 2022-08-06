@@ -1,13 +1,18 @@
 import React from "react";
-import { Title, Numeral, MenuName, LineThrough } from "./styles/Titles.styled";
+import {
+  Title,
+  Numeral,
+  MenuName,
+  LineThrough,
+} from "../../Shared/Titles.styled";
 import {
   ContainerSkills,
   SkillsList,
   StyledSkills,
   SkillItem,
   Image,
-} from "./styles/Skills.styled";
-import useSkills from "../hooks/useSkills";
+} from "./Skills.styled";
+import useSkills from "../../hooks/useSkills";
 
 const Skills = (props, ref) => {
   const SkillsData = useSkills();

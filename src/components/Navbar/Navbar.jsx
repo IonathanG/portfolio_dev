@@ -16,7 +16,7 @@ import {
   MenuName,
   Resume,
   LayerBackgroundDim,
-} from "./styles/Navbar.styled.js";
+} from "./Navbar.styled.js";
 
 const Navbar = ({ aboutRef, skillsRef, workRef, contactRef, toggleTheme }) => {
   const [showMenu, setShowMenu] = useState(false);
@@ -95,6 +95,7 @@ const Navbar = ({ aboutRef, skillsRef, workRef, contactRef, toggleTheme }) => {
     switch (currentMenuIndex) {
       case 0:
         offset_Position = 0;
+        console.log("test");
         break;
       case 1:
         offset_Position = aboutRef.current.offsetTop - header_OffSet;
@@ -108,11 +109,21 @@ const Navbar = ({ aboutRef, skillsRef, workRef, contactRef, toggleTheme }) => {
       case 4:
         offset_Position = contactRef.current.offsetTop - header_OffSet;
         break;
+      case null:
+        console.log("null");
+        break;
       default:
-        return null;
+        console.log("reset");
     }
 
-    window.scrollTo({ top: offset_Position, behavior: "smooth" });
+    if (currentMenuIndex !== null) {
+      window.scrollTo({ top: offset_Position, behavior: "smooth" });
+    }
+
+    // reset index menu for next click - case same menu index is clicked twice
+    setTimeout(() => {
+      setCurrentMenuIndex(null);
+    }, 1000);
   }, [currentMenuIndex, aboutRef, skillsRef, workRef, contactRef]);
 
   // -- change color of current menu item in display // monitor current scroll --

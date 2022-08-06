@@ -1,9 +1,9 @@
 import styled from "styled-components";
-import { device } from "./breakpoints";
-import { Section } from "./Section.styled";
-import { MainStyle } from "./TextStyle.style";
-import { Button } from "./Button.styled";
-import { StyledSVG } from "./Svg.styled";
+import { device } from "../../Shared/breakpoints";
+import { Section } from "../../Shared/Section.styled";
+import { MainStyle } from "../../Shared/TextStyle.style";
+import { Button } from "../../Shared/Button.styled";
+import { StyledSVG } from "../../Shared/Svg.styled";
 
 export const StyledWork = styled(Section)``;
 
@@ -174,7 +174,6 @@ export const WorkLinks = styled.div`
     display: grid;
     place-items: center;
 
-    color: ${({ theme }) => theme.light_Main_Color_2};
     font-family: sans-serif;
     transition: 0.3s ease;
 

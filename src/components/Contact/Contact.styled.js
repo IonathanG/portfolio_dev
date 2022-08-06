@@ -1,10 +1,10 @@
 import styled from "styled-components";
-import { device } from "./breakpoints";
-import { Section } from "./Section.styled";
-import { MainStyle } from "./TextStyle.style";
-import { Button } from "./Button.styled";
-import { StyledSVG } from "./Svg.styled";
-import { SocialLinks } from "./SocialLinks.styled";
+import { device } from "../../Shared/breakpoints";
+import { Section } from "../../Shared/Section.styled";
+import { MainStyle } from "../../Shared/TextStyle.style";
+import { Button } from "../../Shared/Button.styled";
+import { StyledSVG } from "../../Shared/Svg.styled";
+import { SocialLinks } from "../../Shared/SocialLinks.styled";
 
 export const StyledContact = styled(Section)``;
 

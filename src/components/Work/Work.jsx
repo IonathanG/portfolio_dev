@@ -1,6 +1,11 @@
 import React from "react";
-import useWork from "../hooks/useWork";
-import { Title, Numeral, MenuName, LineThrough } from "./styles/Titles.styled";
+import useWork from "../../hooks/useWork";
+import {
+  Title,
+  Numeral,
+  MenuName,
+  LineThrough,
+} from "../../Shared/Titles.styled";
 import {
   StyledWork,
   ContainerWork,
@@ -15,7 +20,7 @@ import {
   SocialSVG,
   ViewLive,
   WorkExtra,
-} from "./styles/Work.styled";
+} from "./Work.styled";
 
 const Work = (props, ref) => {
   const projectList = useWork();

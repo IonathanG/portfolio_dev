@@ -1,16 +1,18 @@
 import React from "react";
-//import ThemeContext from "../context/ThemeContext";
-import { Title, Numeral, MenuName, LineThrough } from "./styles/Titles.styled";
+import {
+  Title,
+  Numeral,
+  MenuName,
+  LineThrough,
+} from "../../Shared/Titles.styled";
 import {
   StyledAbout,
   ContainerAbout,
   AboutDetails,
   AboutImage,
-} from "./styles/About.styled";
+} from "./About.styled";
 
 const About = (props, ref) => {
-  //const { darkTheme } = useContext(ThemeContext);
-
   return (
     <StyledAbout ref={ref}>
       <Title>

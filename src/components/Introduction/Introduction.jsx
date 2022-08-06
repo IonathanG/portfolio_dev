@@ -1,5 +1,4 @@
 import React from "react";
-//import ThemeContext from "../context/ThemeContext";
 import {
   StyledIntroduction,
   HeaderTitle,
@@ -8,11 +7,9 @@ import {
   TitleThree,
   ContainerIntroduction,
   ButtonIntroduction,
-} from "./styles/Introduction.styled";
+} from "./Introduction.styled";
 
 const Introduction = ({ workRef }) => {
-  //const { darkTheme } = useContext(ThemeContext);
-
   const handleClick = () => {
     const header_OffSet = 80;
     const offset_Position = workRef.current.offsetTop - header_OffSet;

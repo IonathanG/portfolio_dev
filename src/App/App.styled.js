@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { device } from "./breakpoints";
+import { device } from "../Shared/breakpoints";
 
 export const AppContainer = styled.div`
   overflow: hidden;

@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { device } from "./breakpoints";
-import { StyledSVG } from "./Svg.styled";
-import { SocialLinks } from "./SocialLinks.styled";
+import { device } from "../../Shared/breakpoints";
+import { StyledSVG } from "../../Shared/Svg.styled";
+import { SocialLinks } from "../../Shared/SocialLinks.styled";
 
 export const StyledFooter = styled.footer`
   color: white;

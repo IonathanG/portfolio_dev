@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { device } from "./breakpoints";
-import { Section } from "./Section.styled";
-import { MainStyle } from "./TextStyle.style";
+import { device } from "../../Shared/breakpoints";
+import { Section } from "../../Shared/Section.styled";
+import { MainStyle } from "../../Shared/TextStyle.style";
 
 export const StyledSkills = styled(Section)``;
 
