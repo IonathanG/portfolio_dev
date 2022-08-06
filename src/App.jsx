@@ -1,6 +1,10 @@
 import { GlobalStyles } from "./components/styles/globalStyles";
 import React, { useEffect, useRef, useState } from "react";
 import { ThemeProvider } from "styled-components";
+import { darkTheme, lightTheme } from "./components/styles/Theme";
+import { AppContainer } from "./components/styles/App.styled";
+import { MainContent } from "./components/styles/App.styled";
+import { useTheme } from "./hooks/useTheme";
 import Navbar from "./components/Navbar";
 import Introduction from "./components/Introduction";
 import About from "./components/About";
@@ -8,10 +12,6 @@ import Skills from "./components/Skills";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Work from "./components/Work";
-import { darkTheme, lightTheme } from "./components/styles/Theme";
-import { AppContainer } from "./components/styles/App.styled";
-import { MainContent } from "./components/styles/App.styled";
-import { useTheme } from "./hooks/useTheme";
 
 function App() {
   // ----- refs used for scrolling to the matching component -----

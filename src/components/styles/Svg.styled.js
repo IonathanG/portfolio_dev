@@ -3,9 +3,12 @@ import styled from "styled-components";
 export const StyledSVG = styled.svg`
   filter: ${({ theme }) => theme.SVG_Links.main};
 
-  &:hover path {
+  &:hover {
     transition: 0.3s ease;
-    fill: ${({ theme }) => theme.main_Color};
     filter: ${({ theme }) => theme.SVG_Links.hover};
+
+    path {
+      fill: ${({ theme }) => theme.theme_Name === "dark" && theme.main_Color};
+    }
   }
 `;
