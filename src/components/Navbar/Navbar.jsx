@@ -160,7 +160,7 @@ const Navbar = ({ aboutRef, skillsRef, workRef, contactRef, toggleTheme }) => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  });
+  }, [scrollPosition, aboutRef, skillsRef, workRef, contactRef]);
 
   return (
     <>
