@@ -15,7 +15,7 @@ const Footer = () => {
       <FloatingEmail>
         <EmailDetails>
           <a
-            href="mailto:ionathangusmini@gmail.com"
+            href=":ionathangusmini@gmail.com"
             target="_blank"
             rel="noreferrer"
             alt="email-link"
