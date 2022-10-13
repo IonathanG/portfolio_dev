@@ -203,7 +203,7 @@ const Navbar = ({ aboutRef, skillsRef, workRef, contactRef, toggleTheme }) => {
               </MenuItem>
               <MenuItem onClick={() => setShowMenu(false)}>
                 <Resume
-                  href="resume/resume_Ionathan_Gusmini.pdf"
+                  href="/resume/Resume Ionathan Gusmini_Front End Dev.pdf"
                   target="_blank"
                   rel="noreferrer"
                   alt="email-link"
