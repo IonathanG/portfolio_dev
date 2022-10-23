@@ -30,7 +30,7 @@ const Skills = (props, ref) => {
           {SkillsData.map((item) => (
             <SkillItem key={item.id}>
               <Image src={item.type} alt="tech-skill-icon" />
-              {item.name}
+              <p>{item.name}</p>
             </SkillItem>
           ))}
         </SkillsList>

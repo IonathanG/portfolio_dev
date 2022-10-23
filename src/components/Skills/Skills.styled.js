@@ -27,7 +27,7 @@ export const SkillsList = styled.ul`
 `;
 
 export const SkillItem = styled.li`
-  width: 130px;
+  width: 145px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -40,6 +40,10 @@ export const SkillItem = styled.li`
   font-size: 14px;
   letter-spacing: 0.8px;
   font-family: sans-serif;
+
+  p {
+    width: 145px;
+  }
 
   @media ${device.phone} {
     font-size: 15px;
