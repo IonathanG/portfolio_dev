@@ -37,20 +37,13 @@
       ]
     },
     {
-      "title": "E-Commerce Shopping",
-      "image": "images/e-commerce-screenshot_3.png",
-      "description": "This react app is designed as a scalable full stack E-Commerce Page. It uses a fully responsive UI Design. Each user can create an account and save items onto their shopping cart and onto a wishlist in Firestore linked to their personal profile.",
-      "tech": [
-        "React",
-        "Sass",
-        "Redux-Toolkit",
-        "Context-API",
-        "Firebase",
-        "CRUD"
-      ],
+      "title": "Entertainment App",
+      "image": "/images/cinema-app_screenshot.png",
+      "description": "A Movie/TV Show Platform Database with Responsive Design Data synced with a movie database API. Search for content Add/Remove bookmarks function from all movies and TV series.",
+      "tech": ["React", "Sass", "Context-API", "CRUD"],
       "links": [
-        "https://github.com/IonathanG/react-ecommerce-redux-back",
-        "https://react-ecommerce-ionyshop.netlify.app/"
+        "https://github.com/IonathanG/React-movie-database",
+        "https://cinema-database.netlify.app/"
       ]
     }
   ]
