@@ -1,20 +1,22 @@
 {
   "workProjects": [
     {
-      "title": "E-Commerce Shopping",
-      "image": "images/e-commerce-screenshot_3.png",
-      "description": "This react app is designed as a scalable full stack E-Commerce Page. It uses a fully responsive UI Design. Each user can create an account and save items onto their shopping cart and onto a wishlist in Firestore linked to their personal profile.",
+      "title": "Bug Tracker App",
+      "image": "/images/bug_tracker_screenshot.png",
+      "description": "Records bugs occurring in software development and tracks the issues. Fully secured with authentication method for any roles: Admin/Manager/Developer/Submitter. Assigns tickets to the right team member in real time. Professional UI / easy access to data / realtime data syncing Firestore.",
       "tech": [
         "React",
-        "Sass",
+        "Styled Components",
         "Redux-Toolkit",
         "Context-API",
+        "React-Hook-Form",
+        "React-Tables",
         "Firebase",
         "CRUD"
       ],
       "links": [
-        "https://github.com/IonathanG/react-ecommerce-redux-back",
-        "https://react-ecommerce-ionyshop.netlify.app/"
+        "https://github.com/IonathanG/react-bug-tracker",
+        "https://bugtracker-ig.netlify.app/"
       ]
     },
     {
