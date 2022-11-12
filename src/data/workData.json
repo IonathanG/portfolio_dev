@@ -37,6 +37,16 @@
       ]
     },
     {
+      "title": "E-Commerce Sneakers Shoe Shop",
+      "image": "images/sneakers_screenshot.png",
+      "description": "This react app is designed as an Online Sneakers Shop. It uses a fully responsive UI Design. Each user can create an account and save items onto their shopping cart saved onto the Local Storage.",
+      "tech": ["React", "Sass", "Redux-Toolkit", "Context-API", "CRUD"],
+      "links": [
+        "https://github.com/IonathanG/react-sneakers_Shop-redux-toolkit",
+        "https://react-e-commerce-sneakers.netlify.app/"
+      ]
+    },
+    {
       "title": "Entertainment App",
       "image": "/images/cinema-app_screenshot.png",
       "description": "A Movie/TV Show Platform Database with Responsive Design Data synced with a movie database API. Search for content Add/Remove bookmarks function from all movies and TV series.",
