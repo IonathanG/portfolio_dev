@@ -39,8 +39,9 @@ export const darkTheme = {
   Img_Skills_Filter: "drop-shadow(1px 2px 1px rgba(155, 149, 149, 0.3))",
 
   Img_Skills_Source: {
-    javascript: "/icons/javascript.svg",
     react: "/icons/react.svg",
+    javascript: "/icons/javascript.svg",
+    typescript: "/icons/typescript.svg",
     html: "/icons/html.svg",
     css: "/icons/css.svg",
     styledComponents: "/icons/styled-components.svg",
@@ -99,8 +100,9 @@ export const lightTheme = {
   Img_Skills_Filter: "drop-shadow(1px 2px 2px rgba(122, 118, 183, 0.2))",
 
   Img_Skills_Source: {
-    javascript: "/icons/javascript_bright.svg",
     react: "/icons/react_bright.svg",
+    javascript: "/icons/javascript_bright.svg",
+    typescript: "/icons/typescript_bright.svg",
     html: "/icons/html_bright.svg",
     css: "/icons/css_bright.svg",
     styledComponents: "/icons/styled-components_bright.svg",

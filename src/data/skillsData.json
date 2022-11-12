@@ -1,23 +1,24 @@
 {
   "SkillsData": [
+    { "id": 0, "name": "React", "type": "react" },
     {
-      "id": 0,
+      "id": 1,
       "name": "Javascript (ES+6)",
       "type": "javascript"
     },
-    { "id": 1, "name": "React", "type": "react" },
-    { "id": 2, "name": "HTML5", "type": "html" },
-    { "id": 3, "name": "CSS3", "type": "css" },
-    { "id": 4, "name": "Styled Components", "type": "styledComponents" },
-    { "id": 5, "name": "Sass", "type": "sass" },
-    { "id": 6, "name": "Firebase", "type": "firebase" },
-    { "id": 7, "name": "GitHub", "type": "github" },
-    { "id": 8, "name": "Redux Toolkit", "type": "redux" },
+    { "id": 2, "name": "Typescript", "type": "typescript" },
+    { "id": 3, "name": "HTML5", "type": "html" },
+    { "id": 4, "name": "CSS3", "type": "css" },
+    { "id": 5, "name": "Styled Components", "type": "styledComponents" },
+    { "id": 6, "name": "Sass", "type": "sass" },
+    { "id": 7, "name": "Firebase", "type": "firebase" },
+    { "id": 8, "name": "GitHub", "type": "github" },
+    { "id": 9, "name": "Redux Toolkit", "type": "redux" },
     {
-      "id": 9,
+      "id": 10,
       "name": "Accessibility",
       "type": "accessibility"
     },
-    { "id": 10, "name": "Adobe Lightroom", "type": "adobe" }
+    { "id": 11, "name": "Adobe Lightroom", "type": "adobe" }
   ]
 }
